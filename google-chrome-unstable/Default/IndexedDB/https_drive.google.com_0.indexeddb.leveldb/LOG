@@ -1,0 +1,17 @@
+2016/09/09-14:25:50.078 1315 Reusing MANIFEST /home/kylepuno/.config/google-chrome-unstable/Default/IndexedDB/https_drive.google.com_0.indexeddb.leveldb/MANIFEST-000001
+2016/09/09-14:25:50.078 1315 Recovering log #11
+2016/09/09-14:25:50.078 1315 Reusing old log /home/kylepuno/.config/google-chrome-unstable/Default/IndexedDB/https_drive.google.com_0.indexeddb.leveldb/000011.log 
+2016/09/09-14:25:50.431 1315 Current memtable full; waiting...
+2016/09/09-14:25:50.431 18571 Level-0 table #15: started
+2016/09/09-14:25:50.433 18571 Level-0 table #15: 643 bytes OK
+2016/09/09-14:25:50.436 18571 Delete type=0 #11
+2016/09/09-14:25:50.436 18571 Level-0 table #17: started
+2016/09/09-14:25:50.436 18571 Level-0 table #17: 0 bytes OK
+2016/09/09-14:25:50.437 18571 Delete type=0 #14
+2016/09/09-14:25:50.437 18571 Manual compaction at level-0 from '\x00\x04\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x05\x00\x00\x00' @ 0 : 0; will stop at '\x00\x04\x00\x00\x05' @ 153 : 1
+2016/09/09-14:25:50.438 18571 Compacting 1@0 + 1@1 files
+2016/09/09-14:25:50.443 18571 Generated table #18@0: 23 keys, 118044 bytes
+2016/09/09-14:25:50.443 18571 Compacted 1@0 + 1@1 files => 118044 bytes
+2016/09/09-14:25:50.445 18571 compacted to: files[ 0 1 1 0 0 0 0 ]
+2016/09/09-14:25:50.445 18571 Delete type=2 #15
+2016/09/09-14:25:50.445 18571 Manual compaction at level-0 from '\x00\x04\x00\x00\x05' @ 153 : 1 .. '\x00\x05\x00\x00\x00' @ 0 : 0; will stop at (end)

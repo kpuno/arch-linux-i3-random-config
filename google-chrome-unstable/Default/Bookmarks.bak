@@ -1,0 +1,966 @@
+{
+   "checksum": "cb3d7fcb4f7ac61722ee3dfa7721668e",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "children": [ {
+               "date_added": "13061679103968000",
+               "id": "67",
+               "meta_info": {
+                  "stars.id": "ssc_c548121d5a1f37c3",
+                  "stars.imageData": "Cg5GdHZrNG43aXctQlBPTRKbAQqSAWh0dHBzOi8vZW1iZWQud2lkZW5jZG4ubmV0L2ltZy9jZW50ZW5uaWFsY29sbGVnZS8wdGJ4ZmRuNDB1LzMwMHgxOTBweC9Bc2h0b25iZWUlMjBMaWJyYXJ5JTIwZXh0ZXJpb3IlMjAyMDE0MDY0MjAwLmpwZWc/a2VlcD1jJnF1YWxpdHk9MTAwJnU9eGw5ZDhuEPABGJgBGmMKW2h0dHA6Ly90Mi5nc3RhdGljLmNvbS9pbWFnZXM/cT10Ym46QU5kOUdjUVMxbGt0UEcwbjJQSHo4M3pzLVZoai03V0d0dU1jZUpmdlZrSm9Tck9lV01DUHhCQmkQ8AEYmAEiEAgBEPABGJgBQgYSBAQBamMojIXsm+/ezAI=",
+                  "stars.pageData": "Ig5MSTB4RWlxbEZnc2hNTQ==",
+                  "stars.type": "2",
+                  "stars.version": "sync.server.Chrome46"
+               },
+               "name": "Centennial College Login - powered by Centennial College",
+               "sync_transaction_version": "135",
+               "type": "url",
+               "url": "https://my.centennialcollege.ca/cp/home/displaylogin"
+            }, {
+               "date_added": "13065141005315000",
+               "id": "68",
+               "meta_info": {
+                  "stars.id": "ssc_ffaff706d9646732",
+                  "stars.imageData": "Cg5PakVqZTNram1ZMzU1TRJGCj5odHRwczovL2UuY2VudGVubmlhbGNvbGxlZ2UuY2EvaW1hZ2VzL2VjZW50ZW5uaWFsLXN0dWRlbnRzLmpwZxDBAhidARpjCltodHRwOi8vdDIuZ3N0YXRpYy5jb20vaW1hZ2VzP3E9dGJuOkFOZDlHY1FqTXpfYUlwLURnSmNzQVhaUHEwQ0paZDVmZUVva2RzaEJTWTdKQlI1Q0pHNXQ5MUtfEMECGJ0BIh8IARDBAhidASCkXEIGEgSmHWd9SgppbWFnZS9qcGVn",
+                  "stars.pageData": "Ig5DdExxamEtaUVCUmY2TQ==",
+                  "stars.type": "2",
+                  "stars.version": "sync.server.Chrome46"
+               },
+               "name": "eCentennial",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "https://e.centennialcollege.ca/"
+            }, {
+               "date_added": "13086210580082956",
+               "id": "69",
+               "meta_info": {
+                  "stars.id": "ssc_440ea0e877dbf869",
+                  "stars.version": "sync.server.Chrome45"
+               },
+               "name": "Centennial Email",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "https://login.microsoftonline.com/login.srf?wa=wsignin1.0&rpsnv=4&ct=1441736975&rver=6.6.6556.0&wp=MBI_SSL&wreply=https:%2F%2Foutlook.office365.com%2Fowa%2F%3Frealm%3Dmy.centennialcollege.ca&id=260563&whr=my.centennialcollege.ca&CBCXT=out"
+            }, {
+               "date_added": "13065608537503010",
+               "id": "70",
+               "meta_info": {
+                  "stars.id": "ssc_cc670aba2564fae7",
+                  "stars.imageData": "Cg5IY0VFekNwc3lTSDZRTRIxCilodHRwOi8vZWxtcy5jZW50ZW5uaWFsY29sbGVnZS5jYS9tZW51LmpwZxCNARi8ARpjCltodHRwOi8vdDEuZ3N0YXRpYy5jb20vaW1hZ2VzP3E9dGJuOkFOZDlHY1NBdktlVmNaLWt6a2hsTzZ2M0FzY1haUi1TWDN5YzliWGNOR1dJWFFrZU9FTjJHV0V4EI0BGLwBIhMIARCNARi8ASC5IEIGEgSAAAAA",
+                  "stars.pageData": "Ig50QmNqNGFWSU51OEVVTQ==",
+                  "stars.type": "2",
+                  "stars.version": "sync.server.Chrome46"
+               },
+               "name": "Centennial College ICET Academic Alliance",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "http://elms.centennialcollege.ca/index.html"
+            }, {
+               "date_added": "13075331744786000",
+               "id": "71",
+               "meta_info": {
+                  "stars.id": "c_18zyi9brzugw",
+                  "stars.imageData": "Cg50VWhDUmg5azAtMDdoTRI9CjZodHRwOi8vbmV0ZHJpdmUuY2VudGVubmlhbGNvbGxlZ2UuY2EvaW1hZ2VzL2ltYWdlcy5qcGcQlwEYaxphCltodHRwOi8vdDEuZ3N0YXRpYy5jb20vaW1hZ2VzP3E9dGJuOkFOZDlHY1RqWU5uS3pIU1VtWmZscDQ0b3R0X3YyV25nbGNsTEFZWVJGbS11WU5PcGdhRERfclFlEHgYVSIdCAEQeBhVINMKQgYSBLWFfn5KCmltYWdlL2pwZWc=",
+                  "stars.note": "",
+                  "stars.pageData": "EqQCUHJuZXRkcml2ZTAyIE5ldGRyaXZlIGlzIGEgcmVtb3RlIGZpbGUgYWNjZXNzIHN5c3RlbS4gSXQgaXMgYSB3ZWIgcG9ydGFsIHN5c3RlbSB0aGF0IHdvcmtzIG9uIGFsbCBtYWpvciBwbGF0Zm9ybXMgY3VycmVudGx5IG9uIHRoZSBtYXJrZXQuIElmIHlvdSByZXF1aXJlIGFzc2lzdGFuY2UgcGxlYXNlIGUtbWFpbCB0aGUgQ2VudGVubmlhbCBDb2xsZWdlIEhlbHBkZXNrLiBUbyBhY2Nlc3MgdGhlIHN5c3RlbSB1c2UgeW91ciBDZW50ZW5uaWFsIENvbGxlZ2UgbmV0d29yayB1c2VybmFtZSBhbmQgcGFzc293b3JkOiIOUEY4UzJWdWJLaWRmT00=",
+                  "stars.type": "2",
+                  "stars.version": "sync.server.Chrome43"
+               },
+               "name": "Centennial College Netdrive - File Access From Anywhere",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "http://netdrive.centennialcollege.ca/"
+            }, {
+               "date_added": "13035441501837000",
+               "id": "72",
+               "meta_info": {
+                  "stars.id": "ssc_72ff1e512fc0f1bd",
+                  "stars.isSynced": "true",
+                  "stars.pageData": "Ig4zUmxTV2prd1dVanZPTQ==",
+                  "stars.type": "2"
+               },
+               "name": "college",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "http://www.reddit.com/r/trackers/comments/hrgmv/tracker_with_pdfsebooks_of_college_textbooks/c1xrq44"
+            }, {
+               "children": [  ],
+               "date_added": "13114802589095412",
+               "date_modified": "13114802589095413",
+               "id": "73",
+               "meta_info": {
+                  "stars.description": "",
+                  "stars.id": "ssf_883a966356cb7401",
+                  "stars.isPublic": "false",
+                  "stars.version": "crx.2.2015.522.11440"
+               },
+               "name": "Semester 1",
+               "sync_transaction_version": "1",
+               "type": "folder"
+            }, {
+               "children": [ {
+                  "date_added": "13075591588933000",
+                  "id": "81",
+                  "meta_info": {
+                     "stars.id": "c_g16ji9g2p7i0",
+                     "stars.imageData": "Cg5RbHdUQUYxRTh6cl9JTRI4CjFodHRwOi8vc3R1ZGVudHdlYi5jZW5jb2wuY2Eva3B1bm8vaW1hZ2VzL2xvZ28uZ2lmELcEGGkaYgpbaHR0cDovL3QyLmdzdGF0aWMuY29tL2ltYWdlcz9xPXRibjpBTmQ5R2NTcUNudFhIaUhuZWRDTXdFNXdVX0NQUWZ5QVBDMHRXMHFVLVBzLW9pNmtVWk4wMTBvbBDFAxhUIg8IARDFAxhUQgYSBIAAAAAoqMr8zZKrzgI=",
+                     "stars.note": "",
+                     "stars.pageData": "EktDb3B5cmlnaHQgQ2VudGVubmlhbCBDb2xsZWdlIC0gQ09NUDIxMyAtIFdlYiBJbnRlcmZhY2UgRGVzaWduIC0gU3VtbWVyIDIwMTU=",
+                     "stars.type": "2",
+                     "stars.version": "sync.server.Chrome45"
+                  },
+                  "name": "Home Page",
+                  "sync_transaction_version": "1",
+                  "type": "url",
+                  "url": "http://studentweb.cencol.ca/kpuno/"
+               }, {
+                  "date_added": "13075238863431000",
+                  "id": "82",
+                  "meta_info": {
+                     "stars.id": "c_8oh9i9a8p2rb",
+                     "stars.imageData": "Cg56LUc1NTNjbUlZb2dxTRJTCktodHRwOi8vZmFjdWx0eXdlYi5jZW50ZW5uaWFsY29sbGVnZS5jYS9qZmlsb3R0aS9DT01QMjEzL2ltYWdlcy9jYWxlbmRhci5qcGcQ2QIYggIaYwpbaHR0cDovL3QzLmdzdGF0aWMuY29tL2ltYWdlcz9xPXRibjpBTmQ5R2NRQmQyY0lCdVN4ZzNNT0NUc1pjV1A2ejdMVThOeXV1bVd6VzFfVFhqMmNnOUJjb21LRxCEAhjCASIQCAEQhAIYwgFCBhIEBwH/XyjnwPHM8KDOAg==",
+                     "stars.note": "",
+                     "stars.pageData": "Ev0BQ09NUC0yMTMgaXMgdGhlIGZpcnN0IGNvdXJzZSBpbiBhIHNlcXVlbmNlIG9mIGNvdXJzZXMgKENPTVAtMjEzLCBDT01QLTIyOSwgYW5kIGEgcmFuZ2Ugb2YgZWxlY3RpdmUgYWR2YW5jZWQgd2ViIGNvdXJzZXMpIGRlc2lnbmVkIHRvIHRlYWNoIHN0dWRlbnRzIGFsbCB0aGUgaW1wb3J0YW50IGN1cnJlbnQgY29uY2VwdHMgYW5kIHRlY2hub2xvZ2llcyByZWxhdGVkIHRvIGRldmVsb3BpbmcgcG93ZXJmdWwgSW50ZXJuZXQgYXBwbGljYXRpb25zLiIOVVUtNGdqRm5vQ2g0Z00=",
+                     "stars.type": "2",
+                     "stars.version": "sync.server.Chrome43"
+                  },
+                  "name": "COMP213 Web Application Development",
+                  "sync_transaction_version": "1",
+                  "type": "url",
+                  "url": "http://facultyweb.centennialcollege.ca/jfilotti/COMP213/index.html"
+               }, {
+                  "date_added": "13065565038134572",
+                  "id": "83",
+                  "meta_info": {
+                     "stars.id": "ssc_0d05fc5512370fa2",
+                     "stars.version": "sync.server.Chrome44"
+                  },
+                  "name": "MyLab & Mastering | Pearson",
+                  "sync_transaction_version": "1",
+                  "type": "url",
+                  "url": "http://portal.mypearson.com/portal/render.userLayoutRootNode.uP?key=95838811437144590122015&uP_sparam=activeTab&uP_tparam=portletViewId"
+               } ],
+               "date_added": "13114802589095435",
+               "date_modified": "13114802589095435",
+               "id": "74",
+               "meta_info": {
+                  "stars.description": "",
+                  "stars.id": "ssf_b72cce69924a52a4",
+                  "stars.isPublic": "false",
+                  "stars.version": "crx.2.2015.522.11440"
+               },
+               "name": "Semester 2",
+               "sync_transaction_version": "1",
+               "type": "folder"
+            }, {
+               "children": [ {
+                  "date_added": "13086746697346352",
+                  "id": "79",
+                  "meta_info": {
+                     "stars.id": "ssc_4d846d1c6c141a5e",
+                     "stars.version": "sync.server.Chrome45"
+                  },
+                  "name": "Kyle Puno Home Page",
+                  "sync_transaction_version": "1",
+                  "type": "url",
+                  "url": "http://studentweb.cencol.ca/kpuno/#id"
+               }, {
+                  "date_added": "13086729369470261",
+                  "id": "80",
+                  "meta_info": {
+                     "stars.id": "ssc_09b0a3cf5ec60256",
+                     "stars.version": "sync.server.Chrome45"
+                  },
+                  "name": "COMP229 Advanced Web Application Development",
+                  "sync_transaction_version": "1",
+                  "type": "url",
+                  "url": "http://facultyweb.centennialcollege.ca/jnesovic/comp229/index.htm"
+               } ],
+               "date_added": "13114802589095456",
+               "date_modified": "13114802589095456",
+               "id": "75",
+               "meta_info": {
+                  "stars.id": "ssf_f5b248c8c81ab2c3",
+                  "stars.version": "sync.server.Chrome45"
+               },
+               "name": "Semester 3",
+               "sync_transaction_version": "1",
+               "type": "folder"
+            }, {
+               "children": [ {
+                  "date_added": "13109886660916873",
+                  "id": "78",
+                  "name": "Index of /~harriah/CCNA1_V5_INTRO2NETWORKS/STUDENT_MATERIALS",
+                  "sync_transaction_version": "1",
+                  "type": "url",
+                  "url": "http://users.metropolia.fi/~harriah/CCNA1_V5_INTRO2NETWORKS/STUDENT_MATERIALS/"
+               } ],
+               "date_added": "13114802589095477",
+               "date_modified": "13115321596225788",
+               "id": "76",
+               "name": "Semester 4",
+               "sync_transaction_version": "1",
+               "type": "folder"
+            }, {
+               "date_added": "13079478257772000",
+               "id": "77",
+               "meta_info": {
+                  "stars.id": "ssc_59e2e2e894e1bde6",
+                  "stars.imageData": "Cg5OZnFkckROZUdEV0RQTRJCCjpodHRwczovL2F2YXRhcnMwLmdpdGh1YnVzZXJjb250ZW50LmNvbS91LzI2NjYyNjg/dj0yJnM9NDYwEOEBGOEBGmMKW2h0dHA6Ly90MS5nc3RhdGljLmNvbS9pbWFnZXM/cT10Ym46QU5kOUdjU2Z5eDN2TTBGSHJzdjVBdGE4UkhnUTZ4bXZHazNFWnVGaWY0VzVkTERCOGN6Ri01dVUQ4QEY4QEiHwgBEOEBGOEBIMAnQgYSBK0Gef9KCmltYWdlL2pwZWc=",
+                  "stars.pageData": "Ig5wOEI0YW5kUG80Z0xiTQ==",
+                  "stars.type": "2",
+                  "stars.version": "sync.server.Chrome45"
+               },
+               "name": "tsiliopoulos (Tom Tsiliopoulos) · GitHub",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "https://github.com/tsiliopoulos"
+            }, {
+               "date_added": "13124914197919334",
+               "id": "159",
+               "name": "Node 202, 6700k, GTX 1080 build complete. : sffpc",
+               "sync_transaction_version": "135",
+               "type": "url",
+               "url": "https://www.reddit.com/r/sffpc/comments/4ri69w/node_202_6700k_gtx_1080_build_complete/"
+            } ],
+            "date_added": "13114802589088752",
+            "date_modified": "13125680195135255",
+            "id": "11",
+            "meta_info": {
+               "stars.description": "",
+               "stars.id": "ssf_5d8007fab4ffeeb2",
+               "stars.isPublic": "false",
+               "stars.version": "sync.server.Chrome43"
+            },
+            "name": "School",
+            "sync_transaction_version": "1",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13112854869890702",
+               "id": "63",
+               "name": "https://www.springboard.com/learning-paths/android/learn/?",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "https://www.springboard.com/learning-paths/android/learn/?"
+            }, {
+               "date_added": "13112855145057829",
+               "id": "64",
+               "name": "Here's a list of resources that I've compiled for Android Interview Prep. Feel free to add to it : androiddev",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "https://www.reddit.com/r/androiddev/comments/4gkdec/heres_a_list_of_resources_that_ive_compiled_for/"
+            }, {
+               "date_added": "13113382579637934",
+               "id": "65",
+               "name": "nisrulz/android-examples: [Examples] Simple basic isolated apps, for budding android devs.",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "https://github.com/nisrulz/android-examples"
+            }, {
+               "date_added": "13113382711423090",
+               "id": "66",
+               "name": "Achin Sagar's answer to If you could learn Android Development from scratch how would you re-do it? - Quora",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "https://www.quora.com/If-you-could-learn-Android-Development-from-scratch-how-would-you-re-do-it/answer/Achin-Sagar"
+            } ],
+            "date_added": "13114802589089042",
+            "date_modified": "13114802589089042",
+            "id": "12",
+            "name": "Android",
+            "sync_transaction_version": "1",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13053506070142261",
+               "id": "55",
+               "meta_info": {
+                  "stars.id": "ssc_d9b5f54293111fca",
+                  "stars.imageData": "Cg5wMHNGaFJRWFhGUHFpTRJqCmJodHRwOi8vbGg1Lmdvb2dsZXVzZXJjb250ZW50LmNvbS8tdlh3b3pJeXExSnMvQUFBQUFBQUFBQUkvQUFBQUFBQUFMdDQvS2NkZkdmZE1lTkkvczUxMi1jL3Bob3RvLmpwZxDhARjgARpjCltodHRwOi8vdDMuZ3N0YXRpYy5jb20vaW1hZ2VzP3E9dGJuOkFOZDlHY1FvcEh1dDE5dUMtMXFVSkFrUVE0VDlsUXFYVHc2eFFZRFBoY2NwT1FQdE9INERJb0lhEOEBGOEBIh8IARDhARjhASCFMUIGEgSKW3j/SgppbWFnZS9qcGVn",
+                  "stars.pageData": "Ig5zMlpCWjNGUEtEYXJlTQ==",
+                  "stars.version": "sync.server.Clank39"
+               },
+               "name": "Must-See Tech Talks for Every Programmer",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "http://brikis98.blogspot.ca/2014/05/must-see-tech-talks-for-every-programmer.html"
+            }, {
+               "date_added": "13064970829649469",
+               "id": "56",
+               "meta_info": {
+                  "stars.id": "ssc_4c3c34176775cfd4",
+                  "stars.pageData": "Ig5iejRTTlVzcnJPaWF5TQ==",
+                  "stars.type": "2",
+                  "stars.version": "sync.server.Chrome43"
+               },
+               "name": "Programmer Competency Matrix",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "http://www.starling-software.com/employment/programmer-competency-matrix.html"
+            }, {
+               "date_added": "13067505609000000",
+               "id": "57",
+               "meta_info": {
+                  "stars.id": "ssc_da8fee7ecba438dd",
+                  "stars.pageData": "EldZb3VyIHNvZnR3YXJlIGlzIHlvdXIgbGVnYWN5LiBJdCBpcyB1cCB0byB5b3UgdG8gZGVjaWRlIGhvdyBsb25nIHRoYXQgbGVnYWN5IGxpdmVzIGZvci4iDmU5Tl9ac3JKSGU3VGtN",
+                  "stars.type": "2",
+                  "stars.version": "sync.server.Clank39"
+               },
+               "name": "The 7 Rules for Writing Software That Won’t Die When You Do — Medium",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "https://medium.com/@karan/the-7-rules-for-writing-software-that-wont-die-when-you-do-38ef0a925650"
+            }, {
+               "date_added": "13075566328954000",
+               "id": "58",
+               "meta_info": {
+                  "stars.id": "ssc_ab5f48894d65bd8c",
+                  "stars.imageData": "Cg5TN01UQjdtazlTTVVNTRI3Ci9odHRwczovL2Jsb2cuc3ZwaW5vLmNvbS9hcnRpY2xlcy8yMDE1MDUwNzAxLmpwZxDQBRjbAxpjCltodHRwOi8vdDMuZ3N0YXRpYy5jb20vaW1hZ2VzP3E9dGJuOkFOZDlHY1RWb1gwbFUzQnZkT0w0T0JScU5ZM2NaSzBvUFYtWkpXeFVsWm9qUU5GMXBENHd4OHpFEJUCGLYBIh8IARCVAhi2ASD8M0IGEgSAAAAASgppbWFnZS9qcGVn",
+                  "stars.note": "",
+                  "stars.pageData": "EtIBV2hlbmV2ZXIgSSBwb3N0IGEgam9iIHJlcXVlc3QgZm9yIGEgU29mdHdhcmUgRW5naW5lZXIgcG9zaXRpb24sIGFwcGxpY2F0aW9ucyBzdGFydCB0cmlja2xpbmcgaW4gcmVhbGx5IHF1aWNrLiBXaGF0IGJvdGhlcnMgbWUgaXMgdGhhdCBzZXZlcmFsIGFwcGxpY2FudHMgd2lsbCBpbnZhcmlhYmx5IGhhdmUgbm8gaWRlYSBvZiB3aGF0ICJwcm9ncmFtbWluZyIgbWVhbnMuIg5Cbm1qTmtTYWh0bG5ETQ==",
+                  "stars.type": "2",
+                  "stars.version": "sync.server.Clank39"
+               },
+               "name": "Five programming problems every Software Engineer should be able to solve in less than 1 hour",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "https://blog.svpino.com/2015/05/07/five-programming-problems-every-software-engineer-should-be-able-to-solve-in-less-than-1-hour"
+            }, {
+               "date_added": "13100294315920409",
+               "id": "59",
+               "name": "ELI5: The differences between programming languages : explainlikeimfive",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "https://www.reddit.com/r/explainlikeimfive/comments/xehy5/eli5_the_differences_between_programming_languages/"
+            }, {
+               "date_added": "13103149822699729",
+               "id": "60",
+               "name": "Java and C# Comparison",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "http://www.harding.edu/fmccown/java_csharp_comparison.html"
+            }, {
+               "date_added": "13077344348411000",
+               "id": "61",
+               "meta_info": {
+                  "stars.flags": "0",
+                  "stars.id": "ssc_1574f4fe5a27dcfa",
+                  "stars.imageData": "Cg52ckhkbTVxMlR0UzNTTRJsCmRodHRwOi8vY29kZWNvbmRvLmNvbS93cC1jb250ZW50L3VwbG9hZHMvMjAxNC8wNC81LUNvZGluZy1DaGFsbGVuZ2VzLXRvLUhlbHAtWW91LVRyYWluLVlvdXItQnJhaW4uanBnEIAKGNAFGmMKW2h0dHA6Ly90Mi5nc3RhdGljLmNvbS9pbWFnZXM/cT10Ym46QU5kOUdjVFFMZ0R6bm5mT3BYRU45VzlDbURJTDRkbENrRDE3d1FZcnc1Q1NoV2wtNUloR0RfVFoQrAIYqAEiHwgBEKwCGKgBIORbQgYSBIAAAABKCmltYWdlL2pwZWc=",
+                  "stars.note": "",
+                  "stars.pageData": "EpgBWW91J3JlIGEgcHJvZ3JhbW1lcj8gV2h5IG5vdCB0cnkgb25lIG9mIHRoZXNlIGNvZGluZyBjaGFsbGVuZ2VzIGFuZCBzZWUgaG93IGdvb2QgeW91IGFyZT8gSGlnaGVzdCBxdWFsaXR5IHByb2dyYW1taW5nIGNoYWxsZW5nZXMgeW91J2xsIGZpbmQgb24gdGhlIHdlYi4iDkZfMzQ3b1dkamxIazNN",
+                  "stars.type": "2"
+               },
+               "name": "17 Coding Challenges to Help You Train Your Brain",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "http://codecondo.com/coding-challenges/"
+            }, {
+               "date_added": "13111485009642571",
+               "id": "62",
+               "name": "MIT Challenge",
+               "sync_transaction_version": "34",
+               "type": "url",
+               "url": "https://www.scotthyoung.com/blog/myprojects/mit-challenge-2/"
+            } ],
+            "date_added": "13114802589089229",
+            "date_modified": "13114802589089229",
+            "id": "13",
+            "meta_info": {
+               "stars.description": "",
+               "stars.id": "ssf_ac47040cf7d40a0c",
+               "stars.isPublic": "false",
+               "stars.isSynced": "true"
+            },
+            "name": "Programming",
+            "sync_transaction_version": "1",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13083436071153800",
+               "id": "40",
+               "meta_info": {
+                  "stars.id": "ssc_164de6aa132e691b",
+                  "stars.version": "sync.server.Chrome45"
+               },
+               "name": "CodePen - Front End Developer Playground & Code Editor in the Browser",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "http://codepen.io/"
+            }, {
+               "date_added": "13083436749144968",
+               "id": "41",
+               "meta_info": {
+                  "stars.flags": "5",
+                  "stars.id": "ssc_c4a3790e283da8c6",
+                  "stars.version": "sync.server.Chrome44"
+               },
+               "name": "Sass: Syntactically Awesome Style Sheets",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "http://sass-lang.com/"
+            }, {
+               "date_added": "13083566867421048",
+               "id": "42",
+               "name": "Dribbble - Show and tell for designers",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "https://dribbble.com/"
+            }, {
+               "date_added": "13108594374461613",
+               "id": "43",
+               "name": "Algorithm Visualizer",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "http://jasonpark.me/AlgorithmVisualizer/"
+            }, {
+               "date_added": "13108770174582198",
+               "id": "44",
+               "name": "Learning JavaScript Design Patterns",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "https://addyosmani.com/resources/essentialjsdesignpatterns/book/"
+            }, {
+               "date_added": "13109130041213664",
+               "id": "45",
+               "name": "sahat/hackathon-starter: A boilerplate for Node.js web applications",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "https://github.com/sahat/hackathon-starter"
+            }, {
+               "date_added": "13109131511920989",
+               "id": "46",
+               "name": "Scotch | Developers bringing fire to the people.",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "https://scotch.io/"
+            }, {
+               "date_added": "13109132397308375",
+               "id": "47",
+               "name": "GitHub - rockbot/node-for-beginners: A list of resources for Node.js Newbies!",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "https://github.com/rockbot/node-for-beginners"
+            }, {
+               "date_added": "13109136604091188",
+               "id": "48",
+               "name": "Getting started with Node.js",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "https://gist.github.com/joepie91/95ed77b71790442b7e61"
+            }, {
+               "date_added": "13109207872513485",
+               "id": "49",
+               "name": "Learn javascript in Y Minutes",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "https://learnxinyminutes.com/docs/javascript/"
+            }, {
+               "date_added": "13111526178090633",
+               "id": "50",
+               "name": "JSbooks - free javascript books",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "http://jsbooks.revolunet.com/"
+            }, {
+               "children": [ {
+                  "date_added": "13110953078871963",
+                  "id": "53",
+                  "name": "GitHub - maxogden/art-of-node: a short introduction to node.js",
+                  "sync_transaction_version": "1",
+                  "type": "url",
+                  "url": "https://github.com/maxogden/art-of-node/#the-art-of-node"
+               }, {
+                  "date_added": "13112208172555384",
+                  "id": "54",
+                  "name": "Learn Node.js Completely and with Confidence | JavaScript is Sexy",
+                  "sync_transaction_version": "1",
+                  "type": "url",
+                  "url": "http://javascriptissexy.com/learn-node-js-completely-and-with-confidence/"
+               } ],
+               "date_added": "13114802589093611",
+               "date_modified": "13114802589093611",
+               "id": "51",
+               "name": "nodejs",
+               "sync_transaction_version": "1",
+               "type": "folder"
+            }, {
+               "date_added": "13113464923794787",
+               "id": "52",
+               "name": "jlem/WebDevChallenge: A hopefully ever-growing list of web-development related challenges",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "https://github.com/jlem/WebDevChallenge"
+            } ],
+            "date_added": "13114802589089399",
+            "date_modified": "13114802589089399",
+            "id": "14",
+            "meta_info": {
+               "stars.description": "",
+               "stars.id": "ssf_0d18c54778901945",
+               "stars.isPublic": "false",
+               "stars.version": "sync.server.Chrome43"
+            },
+            "name": "WebDev",
+            "sync_transaction_version": "1",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13056235657789747",
+               "id": "30",
+               "meta_info": {
+                  "stars.id": "ssc_59736171c2d6eeb1",
+                  "stars.imageData": "Cg5jUExsTHl0ajhZcFBOTRJBCjpodHRwOi8vc21hcnRjYW51Y2tzLmNhL2Fzc2V0cy92Mi9pbWcvaGVhZGVyX2JhY2tncm91bmQucG5nEMAMGH8aYgpbaHR0cDovL3QwLmdzdGF0aWMuY29tL2ltYWdlcz9xPXRibjpBTmQ5R2NSLUJRUHFqbGQ2LVlOMjZJVGNDUmZvRXpOSHc0WXVTNy1hR0drdkhPSGxsdGlkSHBXSBDHBBhWIh4IARDHBBhWIOkPQgYSBImAAABKCmltYWdlL2pwZWc=",
+                  "stars.isSynced": "true",
+                  "stars.pageData": "Ig53a0lZWmJja1QzSWljTQ==",
+                  "stars.type": "2"
+               },
+               "name": "Warehouse Sales Canada",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "http://forum.smartcanucks.ca/warehouse-sales-canada/"
+            }, {
+               "date_added": "13038567466072933",
+               "id": "31",
+               "meta_info": {
+                  "stars.id": "ssc_09c1b952c6dff0da",
+                  "stars.imageData": "Cg5Nd3JJOFp1dkxRSk5WTRI+CjhodHRwOi8vZmkuc29tZXRoaW5nYXdmdWwuY29tL2N1c3RvbXRpdGxlcy90aXRsZS13b3JkLmpwZxBkGGQaYQpbaHR0cDovL3QzLmdzdGF0aWMuY29tL2ltYWdlcz9xPXRibjpBTmQ5R2NUd3BQeVlzNUo5cWdhdlhnTTIzX1VKTE1KMGlBNE1NM2ZfeTlWMFNmOVZFc0RJdDA2NBBkGGQiHQgBEGQYZCCRDUIGEgQkSnf/SgppbWFnZS9qcGVn",
+                  "stars.pageData": "Ig5MUVl2aVd5eE1hRmZuTQ==",
+                  "stars.version": "sync.server.Clank39"
+               },
+               "name": "Everybody wanna be a bodybuilder, but don't nobody wanna train like one - The Something Awful Forums",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "http://forums.somethingawful.com/showthread.php?threadid=2498019&userid=0&perpage=40&pagenumber=1"
+            }, {
+               "date_added": "13071916859503000",
+               "id": "32",
+               "meta_info": {
+                  "stars.id": "ssc_e6c7d34030ec51ea",
+                  "stars.imageData": "Cg55QUJ2Nk5wenpHYXhfTRI+CjZodHRwOi8vYWdvb2Rtb3ZpZXRvd2F0Y2guY29tL3dwLWNvbnRlbnQvdXBsb2Fkcy9uNy5qcGcQhAcY2AQaYwpbaHR0cDovL3QwLmdzdGF0aWMuY29tL2ltYWdlcz9xPXRibjpBTmQ5R2NRUmNMYUVtQ3U3RkdrSFFzZ3dWa3dtanFaM2wtOUVMTDBDVng5V3NrcndOZy1qcy1zYhCTAhi3ASIfCAEQkwIYtwEghC9CBhIEkiF8fkoKaW1hZ2UvanBlZw==",
+                  "stars.pageData": "EktBIGxpc3Qgb2YgdGhlIGJlc3QgaGlnaGx5LXJhdGVkLCBsaXR0bGUta25vd24gbW92aWUgc3VnZ2VzdGlvbnMgb24gTmV0ZmxpeC4iDjlTLVZJT1lhYW9Uc2tN",
+                  "stars.type": "2",
+                  "stars.version": "sync.server.Chrome43"
+               },
+               "name": "23 Best Movies On Netflix You Haven’t Yet Seen - A Good Movie to Watch",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "http://agoodmovietowatch.com/netflix/23-best-netflix/"
+            }, {
+               "date_added": "13077691464119000",
+               "id": "33",
+               "meta_info": {
+                  "stars.id": "c_h2w8iaeswtju",
+                  "stars.imageData": "Cg5ZMTF1ZjhSejZQc2hxTRImCh5odHRwOi8vaS5pbWd1ci5jb20vUEpFNWhEdS5qcGcQ8QQY6xMaYgpbaHR0cDovL3QzLmdzdGF0aWMuY29tL2ltYWdlcz9xPXRibjpBTmQ5R2NSOHh3N1RNelZaNkFocWltOXZjWk1ydWlFR0JMS3JRSV9iLVJLaFZKbmM0X0paeWZPMhBNGJADIh4IARBNGJADIMA6QgYSBIIAAABKCmltYWdlL2pwZWc=",
+                  "stars.note": "",
+                  "stars.pageData": "EnxUaGUgSW50ZXJuZXQncyB2aXN1YWwgc3Rvcnl0ZWxsaW5nIGNvbW11bml0eS4gRXhwbG9yZSwgc2hhcmUsIGFuZCBkaXNjdXNzIHRoZSBiZXN0IHZpc3VhbCBzdG9yaWVzIHRoZSBJbnRlcm5ldCBoYXMgdG8gb2ZmZXIuIg5wcmE0TWdvR3JlcTVhTQ==",
+                  "stars.type": "2",
+                  "stars.version": "sync.server.Clank39"
+               },
+               "name": "27 Diagrams That Make Cooking So Much Easier - Album on Imgur",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "http://imgur.com/gallery/N37Lr"
+            }, {
+               "date_added": "13095762961730357",
+               "id": "34",
+               "name": "test",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "http://imgur.com/a/lPdPW"
+            }, {
+               "date_added": "13102614377193142",
+               "id": "35",
+               "name": "MOOC List | A complete list of Massive Open Online Courses (free online courses) offered by the best universities and entities.",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "https://www.mooc-list.com/"
+            }, {
+               "date_added": "13103911489201580",
+               "id": "36",
+               "name": "24 books that will make you a more well-rounded person | Features | Culture | The Independent",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "http://www.independent.co.uk/arts-entertainment/books/features/24-books-that-will-make-you-a-more-well-rounded-person-a6948276.html"
+            }, {
+               "date_added": "13104872453082435",
+               "id": "37",
+               "name": "twitch pack",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "http://imgur.com/a/WGHwO"
+            }, {
+               "date_added": "13104950161253865",
+               "id": "38",
+               "name": "TwitchDB",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "http://www.twitchdb.tv/profile"
+            }, {
+               "date_added": "13112010775642780",
+               "id": "39",
+               "name": "[Advice] Over ~1 year I trained myself to go from 2 minutes to 20+ during sex. It was a huge pain in the ass, but here's what worked the best. : sex",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "https://www.reddit.com/r/sex/comments/3p131q/advice_over_1_year_i_trained_myself_to_go_from_2/"
+            }, {
+               "date_added": "13118510401557148",
+               "id": "103",
+               "name": "How to get the $48 Manitoba plan anywhere in Canada",
+               "sync_transaction_version": "41",
+               "type": "url",
+               "url": "http://www.howardforums.com/showthread.php/1868676-How-to-get-the-MB-SK-48-Plan-Anywhere-in-Canada"
+            } ],
+            "date_added": "13114802589089607",
+            "date_modified": "13118511656890668",
+            "id": "15",
+            "meta_info": {
+               "stars.description": "",
+               "stars.id": "ssf_d3f6c038101ab832",
+               "stars.isPublic": "false",
+               "stars.version": "sync.server.Chrome43"
+            },
+            "name": "Stuff",
+            "sync_transaction_version": "1",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13105472884729693",
+               "id": "26",
+               "name": "exercism.io",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "http://exercism.io/"
+            }, {
+               "date_added": "13106107031808810",
+               "id": "27",
+               "name": "About - Project Euler",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "https://projecteuler.net/"
+            }, {
+               "date_added": "13100297715453599",
+               "id": "28",
+               "name": "Programming by Doing",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "https://programmingbydoing.com/"
+            }, {
+               "date_added": "13061784299293000",
+               "id": "29",
+               "meta_info": {
+                  "stars.id": "ssc_ea0d366c703d6120",
+                  "stars.imageData": "Cg5sajJCTTU5Q2VEandkTRIuCiZodHRwOi8vd3d3LmNvZGVhYmJleS5jb20vaW1nL2ZicGljLnBuZxCgARigARpjCltodHRwOi8vdDIuZ3N0YXRpYy5jb20vaW1hZ2VzP3E9dGJuOkFOZDlHY1R4akt2YkpqV0c0ZThoVTBISU9oNVppanlyalZMaW1zNXVQR085T0dvMDVtVV9FMGI0EKABGKABIhMIARCgARigASCXMEIGEgSAAgD/",
+                  "stars.pageData": "Ig5adkZQRWpQdmhDT2VMTQ==",
+                  "stars.type": "2",
+                  "stars.version": "sync.server.Chrome42"
+               },
+               "name": "CodeAbbey - programming problems to practice and learn for beginners",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "http://www.codeabbey.com/"
+            } ],
+            "date_added": "13114802589089789",
+            "date_modified": "13114802589089789",
+            "id": "16",
+            "name": "Programming Practice",
+            "sync_transaction_version": "1",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13105049986183914",
+               "id": "22",
+               "name": "kpunoblog",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "https://wordpress.com/stats/insights/kpunoblog.wordpress.com"
+            }, {
+               "date_added": "13106173135946491",
+               "id": "23",
+               "name": "Kyle Puno on CodePen",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "https://codepen.io/kpuno/"
+            }, {
+               "date_added": "13106173144225444",
+               "id": "24",
+               "name": "kpuno (Kyle Puno)",
+               "sync_transaction_version": "1",
+               "type": "url",
+               "url": "https://github.com/kpuno"
+            }, {
+               "date_added": "13106173152856118",
+               "id": "25",
+               "name": "Welcome! | LinkedIn",
+               "sync_transaction_version": "27",
+               "type": "url",
+               "url": "https://www.linkedin.com/"
+            } ],
+            "date_added": "13114802589089971",
+            "date_modified": "13114802589089971",
+            "id": "17",
+            "name": "My Webstuff",
+            "sync_transaction_version": "1",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13115321596225788",
+               "id": "86",
+               "name": "Arch Linux Hints and Tricks · GitHub",
+               "sync_transaction_version": "5",
+               "type": "url",
+               "url": "https://gist.github.com/petarov/3701731"
+            }, {
+               "date_added": "13117733912046003",
+               "id": "89",
+               "name": "andrewngu/sound-redux: A Soundcloud client built with React / Redux",
+               "sync_transaction_version": "9",
+               "type": "url",
+               "url": "https://github.com/andrewngu/sound-redux"
+            }, {
+               "date_added": "13117736671335692",
+               "id": "90",
+               "name": "Thinking in React | React",
+               "sync_transaction_version": "12",
+               "type": "url",
+               "url": "https://facebook.github.io/react/docs/thinking-in-react.html"
+            }, {
+               "date_added": "13117908826098749",
+               "id": "96",
+               "name": "unixsticker",
+               "sync_transaction_version": "25",
+               "type": "url",
+               "url": "https://www.unixstickers.com/"
+            }, {
+               "date_added": "13118511656890668",
+               "id": "104",
+               "name": "Fitting physical TrackPoint buttons to a Lenovo ThinkPad T440s – Cameron Gray",
+               "sync_transaction_version": "44",
+               "type": "url",
+               "url": "http://camerongray.me/2015/02/fitting-physical-trackpoint-buttons-to-a-lenovo-thinkpad-t440s/"
+            }, {
+               "date_added": "13123856285145962",
+               "id": "146",
+               "name": "Redshift - ArchWiki",
+               "sync_transaction_version": "120",
+               "type": "url",
+               "url": "https://wiki.archlinux.org/index.php/Redshift"
+            } ],
+            "date_added": "13114802589090883",
+            "date_modified": "13123856289259314",
+            "id": "20",
+            "name": "Linux",
+            "sync_transaction_version": "1",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13118340914619805",
+               "id": "99",
+               "name": "getify/You-Dont-Know-JS: A book series on JavaScript. @YDKJS on twitter.",
+               "sync_transaction_version": "37",
+               "type": "url",
+               "url": "https://github.com/getify/You-Dont-Know-JS"
+            }, {
+               "date_added": "13118837172196646",
+               "id": "111",
+               "name": "markerikson/react-redux-links: Curated tutorial and resource links I've collected on React, Redux, ES6, and more",
+               "sync_transaction_version": "61",
+               "type": "url",
+               "url": "https://github.com/markerikson/react-redux-links"
+            }, {
+               "date_added": "13124693195579760",
+               "id": "155",
+               "name": "JavaScript Module Pattern: In-Depth",
+               "sync_transaction_version": "132",
+               "type": "url",
+               "url": "http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html"
+            }, {
+               "date_added": "13124700151132837",
+               "id": "156",
+               "name": "GitHub - petehunt/webpack-howto",
+               "sync_transaction_version": "132",
+               "type": "url",
+               "url": "https://github.com/petehunt/webpack-howto"
+            }, {
+               "date_added": "13125680195135255",
+               "id": "164",
+               "name": "Understanding Redux (or, How I Fell in Love with a JavaScript State Container) — you have to learn computers",
+               "sync_transaction_version": "146",
+               "type": "url",
+               "url": "http://www.youhavetolearncomputers.com/blog/2015/9/15/a-conceptual-overview-of-redux-or-how-i-fell-in-love-with-a-javascript-state-container"
+            } ],
+            "date_added": "13118340975466520",
+            "date_modified": "13125680207480686",
+            "id": "100",
+            "name": "javascript",
+            "sync_transaction_version": "36",
+            "type": "folder"
+         }, {
+            "date_added": "13108860613696308",
+            "id": "18",
+            "name": "Why the Best Companies and Developers Give Away Almost Everything They Do · The Macro",
+            "sync_transaction_version": "33",
+            "type": "url",
+            "url": "http://themacro.com/articles/2016/05/why-the-best-give-away/"
+         }, {
+            "children": [ {
+               "date_added": "13118769269535355",
+               "id": "107",
+               "name": "How to shop for a used car (detailed guide - repost) : personalfinance",
+               "sync_transaction_version": "49",
+               "type": "url",
+               "url": "https://www.reddit.com/r/personalfinance/comments/51x18k/how_to_shop_for_a_used_car_detailed_guide_repost/"
+            }, {
+               "date_added": "13118874631444794",
+               "id": "115",
+               "name": "Earl Sweatshirt Performs THREE BRAND NEW UNRELEASED Songs at One Love Music Festival - YouTube",
+               "sync_transaction_version": "69",
+               "type": "url",
+               "url": "https://www.youtube.com/watch?v=NefLGo0dZL0"
+            }, {
+               "date_added": "13119338456097304",
+               "id": "122",
+               "name": "Inspiration Album Dump : malefashionadvice",
+               "sync_transaction_version": "74",
+               "type": "url",
+               "url": "https://www.reddit.com/r/malefashionadvice/comments/2epsqj/inspiration_album_dump/"
+            }, {
+               "date_added": "13120945274993892",
+               "id": "132",
+               "name": "Laptop Keyboard Batteries for DELL, HP, Thinkpad Lenovo Toshiba Acer Asus Samsung Sony and more - New with Warranty | system components | City of Toronto | Kijiji",
+               "sync_transaction_version": "90",
+               "type": "url",
+               "url": "http://www.kijiji.ca/v-computer-components/city-of-toronto/laptop-keyboard-batteries-for-dell-hp-thinkpad-lenovo-toshiba-acer-asus-samsung-sony-and-more-new-with-warranty/c139369?src=topAdSearch&channelId=1101"
+            }, {
+               "date_added": "13121725592069937",
+               "id": "135",
+               "name": "Solution to THREE KEY TRACKPAD driver (windows) : thinkpad",
+               "sync_transaction_version": "94",
+               "type": "url",
+               "url": "https://www.reddit.com/r/thinkpad/comments/3gyadr/solution_to_three_key_trackpad_driver_windows/"
+            } ],
+            "date_added": "13118769282963337",
+            "date_modified": "13122125850504117",
+            "id": "108",
+            "name": "usedcar",
+            "sync_transaction_version": "50",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13122500383419779",
+               "id": "141",
+               "name": "Tutorial - Building Lightning Components with Spring 15",
+               "sync_transaction_version": "112",
+               "type": "url",
+               "url": "http://blog.jeffdouglas.com/2015/03/13/tutorial-building-lightning-components-with-spring-15/"
+            }, {
+               "date_added": "13122500402049704",
+               "id": "139",
+               "name": "Quick Start: Lightning Components | Salesforce Trailhead",
+               "sync_transaction_version": "112",
+               "type": "url",
+               "url": "https://trailhead.salesforce.com/project/quickstart-lightning-components"
+            }, {
+               "date_added": "13122500408352923",
+               "id": "140",
+               "name": "What is the Lightning Component Framework? | Lightning Components Developer Guide | Salesforce Developers",
+               "sync_transaction_version": "112",
+               "type": "url",
+               "url": "https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/intro_framework.htm"
+            }, {
+               "date_added": "13123008270174146",
+               "id": "142",
+               "name": "Salesforce Lightning Tutorial",
+               "sync_transaction_version": "112",
+               "type": "url",
+               "url": "http://ccoenraets.github.io/salesforce-lightning-tutorial/"
+            }, {
+               "date_added": "13124299300040914",
+               "id": "152",
+               "name": "Salesforce Jobs | Mason Frank",
+               "sync_transaction_version": "134",
+               "type": "url",
+               "url": "https://www.masonfrank.com/"
+            } ],
+            "date_added": "13123335256797401",
+            "date_modified": "13124813580548179",
+            "id": "138",
+            "name": "salesforce",
+            "sync_transaction_version": "112",
+            "type": "folder"
+         } ],
+         "date_added": "13114802555709239",
+         "date_modified": "13124541183646165",
+         "id": "1",
+         "name": "Bookmarks bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13114802555709246",
+         "date_modified": "0",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "sync_transaction_version": "146",
+      "synced": {
+         "children": [ {
+            "date_added": "13031696586376795",
+            "id": "6",
+            "name": "warmup set calculator",
+            "sync_transaction_version": "1",
+            "type": "url",
+            "url": "http://corw.in/warmup/"
+         }, {
+            "date_added": "13031777031297250",
+            "id": "7",
+            "meta_info": {
+               "stars.id": "ssc_a607cdcadcb94ab1",
+               "stars.imageData": "Cg41dkdZdmQyV2psOHRoTRImCh5odHRwOi8vaS5pbWd1ci5jb20vSXFXT2VqWi5qcGcQzBUYmRAaYwpbaHR0cDovL3QyLmdzdGF0aWMuY29tL2ltYWdlcz9xPXRibjpBTmQ5R2NRNkptcDhyZWRQaGhRb084V3NJQVdBVmhSNFhDU20wLW1rdHJoRlN3MmhFbHJzV2RJdxCDAhjCASIfCAEQgwIYwgEg/XdCBhIEAAF9fEoKaW1hZ2UvanBlZw==",
+               "stars.pageData": "Ig5PQlpBU25nT3ZDeThmTQ==",
+               "stars.type": "2",
+               "stars.version": "sync.server.Chrome44"
+            },
+            "name": "What are some great hobbies to get into that don't cost tons of money? : AskReddit",
+            "sync_transaction_version": "1",
+            "type": "url",
+            "url": "http://www.reddit.com/r/AskReddit/comments/1t31c6/what_are_some_great_hobbies_to_get_into_that_dont/"
+         }, {
+            "date_added": "13032345667464068",
+            "id": "8",
+            "name": "Wire Wrapped Pendant Malachite with Chrysocolla by UptightWanda",
+            "sync_transaction_version": "1",
+            "type": "url",
+            "url": "https://www.etsy.com/ca/listing/172807246/wire-wrapped-pendant-malachite-with?ref=sr_gallery_8&ga_search_query=copper+wire+wrapped+malachite&ga_view_type=gallery&ga_ship_to=CA&ga_page=3&ga_search_type=all"
+         }, {
+            "date_added": "13032345750789711",
+            "id": "9",
+            "name": "polished malachite stone pendant wire wrapped in by SkyeStones",
+            "sync_transaction_version": "1",
+            "type": "url",
+            "url": "https://www.etsy.com/ca/listing/104574935/polished-malachite-stone-pendant-wire?ref=sr_gallery_35&ga_search_query=copper+wire+wrapped+malachite&ga_view_type=gallery&ga_ship_to=CA&ga_page=1&ga_search_type=all"
+         }, {
+            "date_added": "13032595578442791",
+            "id": "10",
+            "meta_info": {
+               "stars.id": "ssc_dfbfdf317e5ad78e",
+               "stars.imageData": "Cg5kV0xrNmdvMHJjSTJmTRJaClJodHRwczovL2QxNWN3NjVpcGN0c3JyLmNsb3VkZnJvbnQubmV0L2Q5L2ExMGQ1MWJkZmQxMDE0NTEyNjYxMDI1MmZiMGEyOS9TbGlkZTEuanBnEKsCGKgBGmMKW2h0dHA6Ly90MS5nc3RhdGljLmNvbS9pbWFnZXM/cT10Ym46QU5kOUdjUllnRFRSOGR4WTkyMXI0Ul9yR2tIQXpTamJpN1IyRTJ1cldPcC1yeGR4TFVDMlc4OEEQqwIYqAEiEAgBEKsCGKgBQgYSBIAAAAAokI7/j423xQI=",
+               "stars.isSynced": "true",
+               "stars.pageData": "EpEBUHJvZ3JhbW1pbmcgTW9iaWxlIEFwcGxpY2F0aW9ucyBmb3IgQW5kcm9pZCBIYW5kaGVsZCBTeXN0ZW1zIGlzIGEgZnJlZSBvbmxpbmUgY2xhc3MgdGF1Z2h0IGJ5IEFkYW0gUG9ydGVyIG9mIFVuaXZlcnNpdHkgb2YgTWFyeWxhbmQsIENvbGxlZ2UgUGFyayIOaVV0ZmVDeWdwQ3RldU0="
+            },
+            "name": "Programming Mobile Applications for Android Handheld Systems | Coursera",
+            "sync_transaction_version": "1",
+            "type": "url",
+            "url": "https://www.coursera.org/course/android?from_restricted_preview=1&course_id=971246&r=https%3A%2F%2Fclass.coursera.org%2Fandroid-001%2Fclass"
+         } ],
+         "date_added": "13114802555709247",
+         "date_modified": "13032595578442791",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

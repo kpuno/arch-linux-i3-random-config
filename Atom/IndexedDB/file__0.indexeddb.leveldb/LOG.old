@@ -1,0 +1,6 @@
+2016/12/08-11:58:25.802 23315 Reusing MANIFEST /home/kylepuno/.config/Atom/IndexedDB/file__0.indexeddb.leveldb/MANIFEST-000001
+2016/12/08-11:58:25.803 23315 Recovering log #5719
+2016/12/08-11:58:25.809 23315 Reusing old log /home/kylepuno/.config/Atom/IndexedDB/file__0.indexeddb.leveldb/005719.log 
+2016/12/08-12:37:10.415 25595 Level-0 table #5725: started
+2016/12/08-12:37:10.435 25595 Level-0 table #5725: 1684850 bytes OK
+2016/12/08-12:37:10.437 25595 Delete type=0 #5719

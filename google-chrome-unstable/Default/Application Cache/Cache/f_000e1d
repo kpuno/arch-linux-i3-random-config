@@ -1,0 +1,663 @@
+<!DOCTYPE HTML>
+<html lang="en-US" manifest="./manifest.appcache">
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <title>Views and the DOM | Human JavaScript</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 0.5.2">
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          ga('create', 'UA-1196801-11', 'auto');
+          ga('send', 'pageview');
+        </script>
+        <script>
+          !function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(
+          arguments)};d=s.createElement(q);q=s.getElementsByTagName(q)[0];
+          d.src='http://d1l6p2sc9645hc.cloudfront.net/tracker.js';q.parentNode.
+          insertBefore(d,q)}(window,document,'script','_gs');
+          _gs('GSN-555504-T', false);
+          _gs('set', 'cookieDomain', '.humanjavascript.com');
+          _gs('track');
+        </script>
+        
+    
+    
+    <meta name="author" content="HenrikJoreteg">
+    
+    
+    <link rel="next" href="./ch08-templating.html" />
+    
+    
+    <link rel="prev" href="./ch06-models.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+<link rel="stylesheet" href="gitbook/style.css">
+
+
+        
+    <div class="book" data-github="HenrikJoreteg/human-javascript" data-level="8" data-basepath="." data-revision="1428642973331">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
+    <span id="font-settings-wrapper">
+        <a href="#" class="btn pull-left toggle-font-settings" aria-label="Toggle font settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="btn-group btn-block">
+        <button id="reduce-font-size" class="btn btn-default">A</button>
+        <button id="enlarge-font-size" class="btn btn-default">A</button>
+    </div>
+
+    <ul class="list-group font-family-list">
+        <li class="list-group-item" data-font="0">Serif</li>
+        <li class="list-group-item" data-font="1">Sans</li>
+    </ul>
+
+    <div class="btn-group btn-group-xs btn-block color-theme-list">
+        <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
+        <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
+        <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </span>
+
+    <!-- Actions Right -->
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Share on Google Plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="http://twitter.com/home?status=I'm%20reading%20Human%20JavaScript%20by%20%40HenrikJoreteg.%0A%0AA%20free%20online%20book%20on%20building%20sane%20JavaScript%20apps%3A%20http%3A%2F%2Fread.humanjavascript.com" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" aria-label="Share on Twitter"><i class="fa fa-twitter"></i></a>
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-spinner fa-spin"></i>
+        <a href="./" >Human JavaScript</a>
+    </h1>
+</div>
+
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://gumroad.com/l/humanjs" target="blank">Buy the e-book</a>
+        </li>
+        <li>
+            <a href="http://learn.humanjavascript.com" target="blank">Video Tutorials</a>
+        </li>
+        <li>
+            <a href="http://ampersandjs.com" target="blank">Ampersand.js</a>
+        </li>
+        <li>
+            <a href="http://twitter.com/henrikjoreteg" target="blank">Follow @HenrikJoreteg</a>
+        </li>
+
+        <li class="divider"></li>
+
+        <li data-level="0" data-path="index.html">
+            <a href="./"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+    
+        <li class="chapter " data-level="1" data-path="ch00-foreword.html">
+            
+            <a href="./ch00-foreword.html">
+                <i class="fa fa-check"></i> <b>1.</b> Foreword by Jan Lehnardt
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="ch01-introduction.html">
+            
+            <a href="./ch01-introduction.html">
+                <i class="fa fa-check"></i> <b>2.</b> Introduction
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="ch02-the-big-decision.html">
+            
+            <a href="./ch02-the-big-decision.html">
+                <i class="fa fa-check"></i> <b>3.</b> Client or server? Go big or go home.
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="ch03-code-for-humans.html">
+            
+            <a href="./ch03-code-for-humans.html">
+                <i class="fa fa-check"></i> <b>4.</b> Writing code for humans.
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="ch04-organizing-your-code.html">
+            
+            <a href="./ch04-organizing-your-code.html">
+                <i class="fa fa-check"></i> <b>5.</b> No more clientside spaghetti. Organizing your code.
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="ch05-eventification.html">
+            
+            <a href="./ch05-eventification.html">
+                <i class="fa fa-check"></i> <b>6.</b> Using events: Modules talking to modules
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="ch06-models.html">
+            
+            <a href="./ch06-models.html">
+                <i class="fa fa-check"></i> <b>7.</b> Models
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="ch07-views.html">
+            
+            <a href="./ch07-views.html">
+                <i class="fa fa-check"></i> <b>8.</b> Views and the DOM
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="ch08-templating.html">
+            
+            <a href="./ch08-templating.html">
+                <i class="fa fa-check"></i> <b>9.</b> Handling templates
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="ch09-clientside-routing.html">
+            
+            <a href="./ch09-clientside-routing.html">
+                <i class="fa fa-check"></i> <b>10.</b> Clientside Routing
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11" data-path="ch10-launch-sequence.html">
+            
+            <a href="./ch10-launch-sequence.html">
+                <i class="fa fa-check"></i> <b>11.</b> 3... 2... 1... Blastoff!
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12" data-path="ch11-testing-and-QA.html">
+            
+            <a href="./ch11-testing-and-QA.html">
+                <i class="fa fa-check"></i> <b>12.</b> Testing and QA
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13" data-path="ch12-settings-and-configs.html">
+            
+            <a href="./ch12-settings-and-configs.html">
+                <i class="fa fa-check"></i> <b>13.</b> Settings and configs
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14" data-path="ch13-caveats.html">
+            
+            <a href="./ch13-caveats.html">
+                <i class="fa fa-check"></i> <b>14.</b> Caveats/Gotchas
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="15" data-path="ch14-conclusion.html">
+            
+            <a href="./ch14-conclusion.html">
+                <i class="fa fa-check"></i> <b>15.</b> A few closing thoughts
+            </a>
+            
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Generated using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="page-wrapper" tabindex="-1">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 53.333333333333336%;min-width: 46.666666666666664%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="./index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="./ch00-foreword.html" title="Foreword by Jan Lehnardt" class="chapter done new-chapter" data-progress="1" style="left: 6.666666666666667%;"></a>
+    
+        <a href="./ch01-introduction.html" title="Introduction" class="chapter done new-chapter" data-progress="2" style="left: 13.333333333333334%;"></a>
+    
+        <a href="./ch02-the-big-decision.html" title="Client or server? Go big or go home." class="chapter done new-chapter" data-progress="3" style="left: 20%;"></a>
+    
+        <a href="./ch03-code-for-humans.html" title="Writing code for humans." class="chapter done new-chapter" data-progress="4" style="left: 26.666666666666668%;"></a>
+    
+        <a href="./ch04-organizing-your-code.html" title="No more clientside spaghetti. Organizing your code." class="chapter done new-chapter" data-progress="5" style="left: 33.333333333333336%;"></a>
+    
+        <a href="./ch05-eventification.html" title="Using events: Modules talking to modules" class="chapter done new-chapter" data-progress="6" style="left: 40%;"></a>
+    
+        <a href="./ch06-models.html" title="Models" class="chapter done new-chapter" data-progress="7" style="left: 46.666666666666664%;"></a>
+    
+        <a href="./ch07-views.html" title="Views and the DOM" class="chapter done new-chapter" data-progress="8" style="left: 53.333333333333336%;"></a>
+    
+        <a href="./ch08-templating.html" title="Handling templates" class="chapter  new-chapter" data-progress="9" style="left: 60%;"></a>
+    
+        <a href="./ch09-clientside-routing.html" title="Clientside Routing" class="chapter  " data-progress="10" style="left: 66.66666666666667%;"></a>
+    
+        <a href="./ch10-launch-sequence.html" title="3... 2... 1... Blastoff!" class="chapter  " data-progress="11" style="left: 73.33333333333333%;"></a>
+    
+        <a href="./ch11-testing-and-QA.html" title="Testing and QA" class="chapter  " data-progress="12" style="left: 80%;"></a>
+    
+        <a href="./ch12-settings-and-configs.html" title="Settings and configs" class="chapter  " data-progress="13" style="left: 86.66666666666667%;"></a>
+    
+        <a href="./ch13-caveats.html" title="Caveats/Gotchas" class="chapter  " data-progress="14" style="left: 93.33333333333333%;"></a>
+    
+        <a href="./ch14-conclusion.html" title="A few closing thoughts" class="chapter  " data-progress="15" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_9">
+                    
+                        <h1 id="views">Views</h1>
+<p>In the interest of being terribly cliché, views are where the rubber hits the road. It&#39;s where your model layer meets the DOM.</p>
+<p>Before we get into the details, let&#39;s talk a bit about why I believe views are a great pattern. The main thing they give us is a clean way to encapsulate and store all the logic for how your application interacts with the DOM. In fact, it&#39;s even more specific than that; we use them to contain all the logic for a <em>certain element</em> within the DOM. Each view is responsible for the content, event handling, and updating of a single element and the event handlers in views translate user actions into changes to models.</p>
+<p>As I&#39;ve already alluded to in previous chapters, separating application models and views buys us a <em>lot</em> of flexibility. We can change the layout and HTML structure of the whole app without having to change anything about how the app gets, stores or updates its data from an API. So in the same way that CSS helps us clearly separate the styling of a document from the HTML content, views help us separate DOM creation, updates, and events from the model layer in our app.</p>
+<p>Another <em>huge</em> benefit of views is that they let us keep all event handlers (click handlers, etc.) cleanly bundled with the relevant portion of the DOM. If you&#39;ve ever tried to build a single page app without views, you&#39;ll know that managing large numbers of event handlers tends to be a big source of bugs, memory leaks, and messy code.</p>
+<p>There are many tools, frameworks, and approaches to handling this layer – all with varying degrees of magic.</p>
+<p>So, continuing our theme of striving for readability and separation of concerns, we want something simple, explicit, and declarative.</p>
+<p>Backbone views provide some really great basic patterns for building the view layer:</p>
+<ol>
+<li>One root element that the view controls, available as <code>this.el</code> within the view.</li>
+<li>One primary model and/or collection, available as <code>this.model</code> and <code>this.collection</code> respectively.</li>
+<li>A <code>render()</code> method responsible for populating and maintaining that base element with the proper contents.</li>
+<li>An optional <code>initialize()</code> method for any necessary setup.</li>
+<li>Shorthand way to register DOM event handlers (the <code>this.events</code> hash).</li>
+<li>A way of disposing of the view and any listeners that it registered.</li>
+</ol>
+<p>But, they&#39;re <em>quite</em> basic so in addition, we&#39;ll extend Backbone views to enable:</p>
+<ol>
+<li>Simple templating using our precompiled template functions described in Chapter 8.</li>
+<li>A simple way to declare model/template bindings.</li>
+</ol>
+<h2 id="introducing-ampersandview">Introducing AmpersandView</h2>
+<p>As I mentioned Backbone views are very limited in scope – quite intentionally so. The following explanation is pulled straight from the <a href="http://backbonejs.org/#View" target="_blank">Backbone docs</a>:</p>
+<blockquote>
+<p>Backbone views are almost more convention than they are code — they don&#39;t determine anything about your HTML or CSS for you, and can be used with any JavaScript templating library. The general idea is to organize your interface into logical views, backed by models, each of which can be updated independently when the model changes, without having to redraw the page.</p>
+</blockquote>
+<p>Backbone&#39;s general approach is to provide some simple components and patterns, and it&#39;s up to you to apply them as you wish. This non-prescriptive flexibility is a big reason why Backbone has become as popular as it has.</p>
+<p>However, as you start to build more and more apps you find yourself solving similar problems over and over. In pure Backbone projects we found ourselves always creating a <code>BaseView</code> that contained a lot of the common helpers and patterns we wanted in all our views, and we used that to build all our views in the app. One day I found myself copying and pasting one of the <code>BaseView</code>s from one project to another, and just decided to put in on npm instead.</p>
+<p>That&#39;s how AmpersandView was born. It&#39;s like a Backbone view but it gives us a few additional goodies.</p>
+<p>Specifically, it gives us the following:</p>
+<ol>
+<li>Declarative data bindings.</li>
+<li>A <code>.renderWithTemplate()</code> method that does several things we want to do on every render.</li>
+<li>A <code>.listenToAndRun()</code> convenience method for binding view methods to model events, while maintaining the view as the context and triggering them right away.</li>
+<li>A <code>.renderCollection()</code> method for rendering a view for each item in a collection within a given container element in the view.</li>
+</ol>
+<p>We&#39;ll take a look at each of those shortly. But first, let&#39;s figure out how we&#39;re going to structure our views within the app.</p>
+<h2 id="a-hierarchy-of-views">A Hierarchy of Views</h2>
+<p>As you start to build an application with views, you&#39;ll find it makes sense to segment things into subviews. Which raises the question, how do you determine what portions of the app layout to split into subviews?</p>
+<p>I generally start with a single main view, that I put in <code>views/main.js</code>. The main view has the <code>&lt;body&gt;</code> as its root element. It&#39;s only rendered once and creates the main layout of the app, often rendering several subviews. It also becomes the logical place to register &quot;global&quot; event handlers for things like keyboard shortcuts or app-wide click handlers.</p>
+<p>The layout will vary from one app to the next, but there are typically some ever-present elements that are part of the layout (navigation, etc.) and often I will have some type of main content container that swaps out based on the URL. I typically give that an <code>id</code> of <code>pages</code> and then render a <code>PageView</code> into that container based on the URL using a little helper module called <a href="http://ampersandjs.com/docs#ampersand-view-switcher" target="_blank">ampersand-view-switcher</a></p>
+<p>The view switcher is just a way to handle swapping out views. By default it just renders and appends the view you give it to the container and removes any existing one that may be there currently. But we can also provide custom ways to transition those. We may, for example, want the page to be able to set the <code>&lt;title&gt;</code> on the page.</p>
+<p>Here&#39;s an example of how a main view might look if we&#39;re using AmpersandView:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> AmpersandView = <span class="hljs-built_in">require</span>(<span class="hljs-string">'ampersand-view'</span>);
+<span class="hljs-keyword">var</span> ViewSwitcher = <span class="hljs-built_in">require</span>(<span class="hljs-string">'ampersand-view-switcher'</span>);
+<span class="hljs-keyword">var</span> templates = <span class="hljs-built_in">require</span>(<span class="hljs-string">'./templates'</span>);
+
+
+module.exports = AmpersandView.extend({
+  <span class="hljs-comment">// Our template function that returns an HTML string</span>
+  <span class="hljs-comment">// this can also just be a string. Template language</span>
+  <span class="hljs-comment">// is irrelevant. It just needs to be a function that</span>
+  <span class="hljs-comment">// takes an argument and returns a string.</span>
+  template: templates.main,
+
+  render: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+    <span class="hljs-comment">// Inherited from AmpersandView, it renders the main template</span>
+    <span class="hljs-comment">// and inserts it into the root element.</span>
+    <span class="hljs-keyword">this</span>.renderWithTemplate();
+    <span class="hljs-comment">// set up our page switcher for that element</span>
+    <span class="hljs-keyword">this</span>.pageSwitcher = <span class="hljs-keyword">new</span> ViewSwitcher(<span class="hljs-keyword">this</span>.get(<span class="hljs-string">'#pages'</span>), {
+      <span class="hljs-comment">// here we provide a few things we'd like to do each time</span>
+      <span class="hljs-comment">// we switch pages in the app.</span>
+      show: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(newView, oldView)</span> {</span>
+        <span class="hljs-comment">// set our document title</span>
+        document.title = newView.pageTitle || <span class="hljs-string">'my awesome app'</span>;
+        <span class="hljs-comment">// scroll to the top</span>
+        document.body.scrollTop = <span class="hljs-number">0</span>;
+        <span class="hljs-comment">// perhaps store a reference to our current page on our</span>
+        <span class="hljs-comment">// app global for easy access from the browser console.</span>
+        app.currentPage = newView;
+      }
+    });
+  }
+});
+</code></pre>
+<p>You will have to make a judgement call on the best way to segment things into manageable, logical containers for your application. Generally, a good rule of thumb is try to encapsulate views by the models you&#39;ll use to control them.</p>
+<p>For example, let&#39;s assume you&#39;ve got a certain URL that represents a page that should show a list of items. In this case you have a page view that is rendered inside the main views&#39; page container. That PageView would render any headings for that page, as well as a basic list container (a <code>&lt;ul&gt;</code> perhaps) for your list of items.</p>
+<p>That page would take the collection you plan to render into that container as its <code>collection</code> property, then we could use the <code>renderCollection</code> method to manage adding/removing individual views (one for each model).</p>
+<p>If there isn&#39;t a lot of behavior associated with each line item, you may choose to handle the rendering of individual items in the view containing the collection. You&#39;ll simply have to make a determination based on how much behavior is associated with each item in the list. If it&#39;s fairly behavior-less or log-like (say a chat room, for example) you might want to render them into the container and be done. If it&#39;s more interactive, like a tour scheduling app where you&#39;re dragging items around, editing them, and there&#39;s lots of associated data with each one, then you&#39;ll probably want a view to contain the behavior of each item.</p>
+<p>Take a look at the associated demo app to see examples of each approach to handling collections.</p>
+<p>You can find the app on my <a href="https://github.com/HenrikJoreteg/humanjs-sample-app" target="_blank">GitHub account</a></p>
+<h3 id="caveat-understanding-this-and-this-get-">Caveat: understanding <code>this.$</code> and <code>this.get</code></h3>
+<p>Inside the example above, in the <code>render</code> method, you&#39;ll notice that we pass: <code>this.get(&#39;#pages&#39;)</code> in Backbone you&#39;d do <code>this.$(&#39;#pages&#39;)[0]</code> as the <code>el</code> argument for the subview. You may wonder, why not just pass <code>$(&#39;#pages&#39;)</code> or even just <code>document.getElementById(&#39;pages&#39;)</code>?</p>
+<p>The reason is we can&#39;t assume that the view is attached to the main DOM tree when this method is called. If you haven&#39;t yet attached it, the other selector queries wouldn&#39;t be able to find the right elements because they&#39;re not in the main document tree yet. In fact, often a parent view will call <code>render()</code> on a subview as part of its own render method, and then attach the result to the DOM. This is entirely intentional because it&#39;s much faster for the browser to create the DOM elements outside of the main DOM tree, only attaching and painting them once.</p>
+<p>So, to deal with this problem, Backbone Views create a method named <code>$</code> for each view. This method is functionally equivalent to a normal jQuery selector such as <code>$(&#39;.item&#39;)</code>. <em>But</em>, it only looks for matches within the view&#39;s element. Not only is it faster (because there&#39;s less DOM to traverse) but more importantly, it finds the elements that match your selector within the view&#39;s element <em>even if it&#39;s not yet been attached to the DOM</em>. Ampersand-View&#39;s <code>.get()</code> method works similarly in that it just searches <em>within the view&#39;s root element</em> to retrieve matching items.</p>
+<p>If that was all a bit too complex, just know that you should generally use <code>this.$(&#39;.yourSelector&#39;)</code> or <code>this.get</code> instead of <code>$(&#39;.yourSelector&#39;)</code> when trying to grab elements within a view.</p>
+<h3 id="registering-dom-event-handlers">Registering DOM event handlers</h3>
+<p>In wiring up a view to the DOM, you&#39;ll often want to respond to interactions from the user.</p>
+<p>Because registering a handler to a particular method in your view and binding it to execute in the context of the view is such a common pattern, Backbone gives us a declarative short way to register all the handlers we&#39;ll need for a given view.</p>
+<p>This is done through the <code>events</code> hash.</p>
+<p>It works like this:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> AmpersandView = <span class="hljs-built_in">require</span>(<span class="hljs-string">'ampersand-view'</span>);
+<span class="hljs-keyword">var</span> templates = <span class="hljs-built_in">require</span>(<span class="hljs-string">'templates'</span>);
+
+
+module.exports = AmpersandView.extend({
+  template: templates.widget,
+  events: {
+    <span class="hljs-comment">// The event + element: the name of the handler</span>
+    <span class="hljs-string">'click .delete'</span>: <span class="hljs-string">'handleDeleteClick'</span>,
+    <span class="hljs-string">'keyup input.search'</span>: <span class="hljs-string">'handleSearchKeyUp'</span>
+  },
+  render: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+    <span class="hljs-comment">// This we inherit from ampersand-view</span>
+    <span class="hljs-keyword">this</span>.renderWithTemplate();
+  },
+  handleDeleteClick: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+    <span class="hljs-keyword">this</span>.model.delete();
+  },
+  handleSearchKeyUp: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+    <span class="hljs-keyword">var</span> inputVal = <span class="hljs-keyword">this</span>.$(<span class="hljs-string">'.search'</span>).val();
+    <span class="hljs-keyword">this</span>.collection.each(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(model)</span> {</span>
+      model.matchesSearch = <span class="hljs-keyword">this</span>.name.indexOf(inputVal) !== -<span class="hljs-number">1</span>;
+    });
+  }
+});
+</code></pre>
+<p>That events hash is equivalent to doing the following inside the render method.</p>
+<pre><code class="lang-javascript">  render: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+    <span class="hljs-comment">// This we inherit from ampersand-view</span>
+    <span class="hljs-keyword">this</span>.renderWithTemplate();
+    $(<span class="hljs-keyword">this</span>.el).delegate(<span class="hljs-string">'.delete'</span>, <span class="hljs-string">'click'</span>, _.bind(<span class="hljs-keyword">this</span>.handleDeleteClick, <span class="hljs-keyword">this</span>));
+    $(<span class="hljs-keyword">this</span>.el).delegate(<span class="hljs-string">'input.search'</span>, <span class="hljs-string">'keyup'</span>, _.bind(<span class="hljs-keyword">this</span>.handleSearchKeyUp, <span class="hljs-keyword">this</span>));
+  },
+</code></pre>
+<p>But the events hash is less verbose and arguably more readable.</p>
+<h3 id="binding-model-values-to-templates">Binding model values to templates</h3>
+<p>In order to keep our separation of concerns, very rarely do I set style attributes directly from JavaScript. I believe that is a job for CSS. So much of what I do is flip classes based on property values on the underlying model.</p>
+<p>Backbone kind of loosely encourages you to just re-render views entirely when something changes. In a lot of cases that&#39;s totally fine, but I like only changing the specific thing that needs updating when the underlying model changes. Obviously, this can be a bit more tedious because you have to bind each thing explicitly somehow.</p>
+<p>This is where AmpersandView comes in handy. Much in the same way that we declare event handlers in the <code>events</code> hash as described above, we can also declare data bindings of various types in our views as follows:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> AmpersandView = <span class="hljs-built_in">require</span>(<span class="hljs-string">'ampersand-view'</span>);
+<span class="hljs-keyword">var</span> templates = <span class="hljs-built_in">require</span>(<span class="hljs-string">'templates'</span>);
+
+
+module.exports = AmpersandView.extend({
+  template: templates.widget,
+  events: {
+    <span class="hljs-string">'click .delete'</span>: <span class="hljs-string">'handleDeleteClick'</span>,
+    <span class="hljs-string">'keyup input.search'</span>: <span class="hljs-string">'handleSearchKeyUp'</span>
+  },
+  <span class="hljs-comment">// We simply list our bindings here</span>
+  bindings: {
+    <span class="hljs-comment">// This simple text binding means</span>
+    <span class="hljs-comment">// we put the property value of the</span>
+    <span class="hljs-comment">// model in this view into the</span>
+    <span class="hljs-comment">// element that matches the</span>
+    <span class="hljs-comment">// '.profileName' selector as text.</span>
+    <span class="hljs-string">'model.name'</span>: <span class="hljs-string">'.profileName'</span>,
+    <span class="hljs-comment">// There's a few different binding types</span>
+    <span class="hljs-comment">// `booleanClass` bindings will add or remove</span>
+    <span class="hljs-comment">// a class with the name provided based on</span>
+    <span class="hljs-comment">// the truthiness of the property.</span>
+    <span class="hljs-string">'model.selected'</span>: {
+      type: <span class="hljs-string">'booleanClass'</span>,
+      selector: <span class="hljs-string">'.container'</span>,
+      name: <span class="hljs-string">'active'</span>
+    }
+  },
+  handleDeleteClick: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+    <span class="hljs-keyword">this</span>.model.delete();
+  },
+  handleSearchKeyUp: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+    <span class="hljs-keyword">var</span> inputVal = <span class="hljs-keyword">this</span>.$(<span class="hljs-string">'.search'</span>).val();
+    <span class="hljs-keyword">this</span>.collection.each(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(model)</span> {</span>
+      model.matchesSearch = <span class="hljs-keyword">this</span>.name.indexOf(inputVal) !== -<span class="hljs-number">1</span>;
+    });
+  }
+});
+</code></pre>
+<p>In this way, you follow a similar style and pattern to Backbone to also specify what properties (or computed properties) you want bound to what DOM.</p>
+<p>As an additional bonus, all handlers are registered using the <code>listenTo()</code> method which handles unbinding those handlers when the view is destroyed.</p>
+<p>The <a href="http://ampersandjs.com/docs#ampersand-dom-bindings-binding-types" target="_blank">ampersandjs.com docs site</a> has a full listing of all the available binding types.</p>
+<h3 id="ampersandview-s-convenience-methods">AmpersandView&#39;s convenience methods</h3>
+<h4 id="-renderwithtemplate-">.renderWithTemplate();</h4>
+<p>The general pattern, encouraged in the Backbone documentation is to use templates to populate the contents of a view&#39;s root element. That way, you never have to re-register any DOM event handlers because they&#39;re attached to the view&#39;s root element. With that approach (which is perfect for some uses) you can just call <code>.render()</code> any time anything changes in the model.</p>
+<p>If you have a simple view that renders a single model, binding views becomes <em>very</em> easy at that point. You simply do something like this:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> Backbone = <span class="hljs-built_in">require</span>(<span class="hljs-string">'backbone'</span>);
+<span class="hljs-keyword">var</span> _ = <span class="hljs-built_in">require</span>(<span class="hljs-string">'underscore'</span>);
+<span class="hljs-keyword">var</span> templates = <span class="hljs-built_in">require</span>(<span class="hljs-string">'templates'</span>);
+
+
+module.exports = Backbone.View.extend({
+  template: templates.user,
+  events: {
+    <span class="hljs-string">'click .myClass'</span>: <span class="hljs-string">'myHandler'</span>
+  },
+  initialize: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+    <span class="hljs-comment">// Register a single change handler for the model</span>
+    <span class="hljs-keyword">this</span>.listenTo(<span class="hljs-keyword">this</span>.model, <span class="hljs-string">'change'</span>, _.bind(<span class="hljs-keyword">this</span>.render, <span class="hljs-keyword">this</span>));
+  },
+  render: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+    <span class="hljs-comment">// We simply fill the contents of the current element with</span>
+    <span class="hljs-comment">// the rendered HTML using the model's current attributes each time.</span>
+    $(<span class="hljs-keyword">this</span>.el).html(<span class="hljs-keyword">this</span>.template(<span class="hljs-keyword">this</span>.model.toJSON()));
+  },
+  myHandler: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+    <span class="hljs-comment">// Do something</span>
+  }
+});
+</code></pre>
+<p>At this point, any change we make to that model will simply re-render the HTML for the whole thing. Slick, simple, and easy.</p>
+<p>However, that&#39;s not always what you want, especially in realtime apps where an incoming event could come in and change a model when you&#39;re not ready for it. But perhaps a more compelling argument is where you want to use CSS3 transitions and animations. If we want to add a class that triggers a transition, simply re-drawing the whole container won&#39;t actually trigger it because there was never really a transition.</p>
+<p>Also, it doesn&#39;t quite feel right to me to write templates that only contain the contents of the view element:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>My page<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>My content<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+</code></pre>
+<p>It seems more logical to write <em>the entire</em> template for that view which also includes the root element itself:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">section</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"page"</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>My page<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>My content<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
+</code></pre>
+<p>Because now, just by looking at that template, I can look at it and know what it is without having to know which view is going to use it.</p>
+<p>In addition, if I want to include some conditional class or some other property on the root element I can do so declaratively, right in the template along with everything else, instead of having to do it in the render method of the view.</p>
+<p>Now, enter <code>renderWithTemplate(contextObject)</code>. This simply encapsulates everything you need to do to render the view using the <code>template</code> property while also replacing the entire existing root element and making sure all the event handlers in your event hash are registered. If your <code>template</code> is a function, it will be called with the contextObject you called <code>renderWithTemplate</code> with.</p>
+<p>At its most basic, a <code>template</code> can simply be a string of HTML, but it can be also be a function that returns a string of HTML, or a function that returns a DOM element.</p>
+<h4 id="-listentoandrun-">.listenToAndRun();</h4>
+<p>Very commonly, when you want to listen to some change on a model, you&#39;re often wanting to:</p>
+<ol>
+<li>Bind the handler so that when it&#39;s called, <code>this</code> is the view.</li>
+<li>Run the bound handler once so its effect is applied to the DOM. (This avoids having to duplicate logic in the template that&#39;s already in your handler).</li>
+</ol>
+<p><code>.listenToAndRun()</code> does both of these for you.</p>
+<p>So instead of:</p>
+<pre><code class="lang-javascript">...
+initialize: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+  <span class="hljs-keyword">this</span>.listenTo(<span class="hljs-keyword">this</span>.model, <span class="hljs-string">'change'</span>, _.bind(<span class="hljs-keyword">this</span>.doSomething, <span class="hljs-keyword">this</span>));
+  <span class="hljs-keyword">this</span>.doSomething();
+}
+...
+</code></pre>
+<p>You can just do:</p>
+<pre><code class="lang-javascript">...
+initialize: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+  <span class="hljs-keyword">this</span>.listenToAndRun(<span class="hljs-keyword">this</span>.model, <span class="hljs-string">'change'</span>, <span class="hljs-keyword">this</span>.doSomething);
+}
+...
+</code></pre>
+<h4 id="-rendercollection-">.renderCollection();</h4>
+<p><code>.renderCollection()</code> is a lightweight way to render and maintain a collection of models within a container.</p>
+<p>It will listen for <code>add</code>, <code>remove</code>, <code>sort</code> events on the collection and shuffle and re-draw views for each model as necessary.</p>
+<p>You simply pass it the collection, the subview you want to render each model with, and the set of options you want to pass to the subview, and it handles the rest.</p>
+<p>Example:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> AmpersandView = <span class="hljs-built_in">require</span>(<span class="hljs-string">'ampersand-view'</span>);
+<span class="hljs-keyword">var</span> templates = <span class="hljs-built_in">require</span>(<span class="hljs-string">'templates'</span>);
+<span class="hljs-keyword">var</span> ItemView = <span class="hljs-built_in">require</span>(<span class="hljs-string">'./item'</span>);
+
+
+module.exports = AmpersandView.extend({
+  template: templates.myPage,
+  render: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+    <span class="hljs-keyword">this</span>.renderWithTemplate();
+    <span class="hljs-keyword">this</span>.renderCollection(<span class="hljs-keyword">this</span>.collection, ItemView, <span class="hljs-keyword">this</span>.get(<span class="hljs-string">'.myItemList'</span>));
+  }
+});
+</code></pre>
+<p>For more on AmpersandView, or to contribute and make it better, see the documentation and source on <a href="https://github.com/ampersandjs/ampersand-view" target="_blank">GitHub</a>.</p>
+<h2 id="a-bit-about-defining-bindings-in-templates-la-angularjs-ractive-">A bit about defining bindings in templates (à la AngularJS, Ractive)</h2>
+<p>There are several libraries out there that let you specify in your templates which pieces of information go where in your DOM and then they automatically create the event bindings for you.</p>
+<p>Basically, you&#39;d have a template like this:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Hello {{ name }}<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<p>Then you mash that together with your model and then they&#39;re automatically bound. As a paraphrased pseudo-code-y example:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> template = <span class="hljs-built_in">require</span>(<span class="hljs-string">'compiled-template-from-somewhere'</span>);
+<span class="hljs-keyword">var</span> model = <span class="hljs-built_in">require</span>(<span class="hljs-string">'./models/some-model'</span>);
+
+document.body.appendChild(template(model));
+
+<span class="hljs-comment">// Then if you changed the model</span>
+model.set(<span class="hljs-string">'name'</span>, <span class="hljs-string">'Sue'</span>);
+
+<span class="hljs-comment">// the DOM would be automatically be updated to:</span>
+<span class="hljs-comment">/*
+&lt;div&gt;
+  &lt;p&gt;Hello Sue&lt;/p&gt;
+&lt;/div&gt;
+*/</span>
+</code></pre>
+<p>It&#39;s really a matter of preference and luckily it&#39;s easy enough to switch it out for whatever method you prefer.</p>
+<p>For simple, put-this-text-here bindings, it&#39;s all pretty straightforward.</p>
+<p>Where things can potentially get a bit messy is if what you actually want is a bit of logic. Say you want to add/remove an item from a list of classes based on a boolean property on a model, or say you want to add/remove an entire attribute, like <code>checked</code>. In order for the template language to know that&#39;s what we want, it has to have some type of new syntax to indicate how the binding should behave.</p>
+<p>In my opinion, this is where many of these languages go too far. They simply try to do too much declared logic in a template. Personally, it doesn&#39;t feel right to be writing code within markup.</p>
+<p>The important thing to recognize is that both the template language approach and the declarative bindings are <em>really doing the same thing</em>. They&#39;re just a way of building a set of functions that can turn &quot;Hey, this value changed on a model&quot; into the actual DOM method that will update the DOM, for example: <code>someElement.setAttribute(&#39;href&#39;, &#39;/my-url&#39;)</code>.</p>
+<p>If you&#39;re wanting to use a templating language that can also do the bindings for you, I&#39;d strongly recommend: <a href="https://github.com/latentflip/domthing" target="_blank">Phil Robert&#39;s domthing</a>. It&#39;s a variant of <a href="http://mustache.github.io/" target="_blank">mustache</a> that let&#39;s you automatically bind using templates that look like this:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"entry"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>{{title}}<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"body"</span>&gt;</span>
+    {{body}}
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<p>But it will also automatically create bindings for those properties to the resulting DOM.</p>
+<h2 id="a-note-about-re-usability">A note about re-usability</h2>
+<p>Personally, I want to make sure that anything I may want to re-use in another project doesn&#39;t depend on a certain templating language.</p>
+<p>So, for anything that isn&#39;t specific to the app I&#39;m building, I&#39;d suggest just using HTML strings and declared bindings to maximize re-usability.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./ch06-models.html" class="navigation navigation-prev " aria-label="Previous page: Models"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./ch08-templating.html" class="navigation navigation-next " aria-label="Next page: Handling templates"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

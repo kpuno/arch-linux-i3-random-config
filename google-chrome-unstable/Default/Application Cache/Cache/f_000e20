@@ -1,0 +1,485 @@
+<!DOCTYPE HTML>
+<html lang="en-US" manifest="./manifest.appcache">
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <title>Testing and QA | Human JavaScript</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 0.5.2">
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          ga('create', 'UA-1196801-11', 'auto');
+          ga('send', 'pageview');
+        </script>
+        <script>
+          !function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(
+          arguments)};d=s.createElement(q);q=s.getElementsByTagName(q)[0];
+          d.src='http://d1l6p2sc9645hc.cloudfront.net/tracker.js';q.parentNode.
+          insertBefore(d,q)}(window,document,'script','_gs');
+          _gs('GSN-555504-T', false);
+          _gs('set', 'cookieDomain', '.humanjavascript.com');
+          _gs('track');
+        </script>
+        
+    
+    
+    <meta name="author" content="HenrikJoreteg">
+    
+    
+    <link rel="next" href="./ch12-settings-and-configs.html" />
+    
+    
+    <link rel="prev" href="./ch10-launch-sequence.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+<link rel="stylesheet" href="gitbook/style.css">
+
+
+        
+    <div class="book" data-github="HenrikJoreteg/human-javascript" data-level="12" data-basepath="." data-revision="1428642973331">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
+    <span id="font-settings-wrapper">
+        <a href="#" class="btn pull-left toggle-font-settings" aria-label="Toggle font settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="btn-group btn-block">
+        <button id="reduce-font-size" class="btn btn-default">A</button>
+        <button id="enlarge-font-size" class="btn btn-default">A</button>
+    </div>
+
+    <ul class="list-group font-family-list">
+        <li class="list-group-item" data-font="0">Serif</li>
+        <li class="list-group-item" data-font="1">Sans</li>
+    </ul>
+
+    <div class="btn-group btn-group-xs btn-block color-theme-list">
+        <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
+        <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
+        <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </span>
+
+    <!-- Actions Right -->
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Share on Google Plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="http://twitter.com/home?status=I'm%20reading%20Human%20JavaScript%20by%20%40HenrikJoreteg.%0A%0AA%20free%20online%20book%20on%20building%20sane%20JavaScript%20apps%3A%20http%3A%2F%2Fread.humanjavascript.com" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" aria-label="Share on Twitter"><i class="fa fa-twitter"></i></a>
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-spinner fa-spin"></i>
+        <a href="./" >Human JavaScript</a>
+    </h1>
+</div>
+
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://gumroad.com/l/humanjs" target="blank">Buy the e-book</a>
+        </li>
+        <li>
+            <a href="http://learn.humanjavascript.com" target="blank">Video Tutorials</a>
+        </li>
+        <li>
+            <a href="http://ampersandjs.com" target="blank">Ampersand.js</a>
+        </li>
+        <li>
+            <a href="http://twitter.com/henrikjoreteg" target="blank">Follow @HenrikJoreteg</a>
+        </li>
+
+        <li class="divider"></li>
+
+        <li data-level="0" data-path="index.html">
+            <a href="./"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+    
+        <li class="chapter " data-level="1" data-path="ch00-foreword.html">
+            
+            <a href="./ch00-foreword.html">
+                <i class="fa fa-check"></i> <b>1.</b> Foreword by Jan Lehnardt
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="ch01-introduction.html">
+            
+            <a href="./ch01-introduction.html">
+                <i class="fa fa-check"></i> <b>2.</b> Introduction
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="ch02-the-big-decision.html">
+            
+            <a href="./ch02-the-big-decision.html">
+                <i class="fa fa-check"></i> <b>3.</b> Client or server? Go big or go home.
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="ch03-code-for-humans.html">
+            
+            <a href="./ch03-code-for-humans.html">
+                <i class="fa fa-check"></i> <b>4.</b> Writing code for humans.
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="ch04-organizing-your-code.html">
+            
+            <a href="./ch04-organizing-your-code.html">
+                <i class="fa fa-check"></i> <b>5.</b> No more clientside spaghetti. Organizing your code.
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="ch05-eventification.html">
+            
+            <a href="./ch05-eventification.html">
+                <i class="fa fa-check"></i> <b>6.</b> Using events: Modules talking to modules
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="ch06-models.html">
+            
+            <a href="./ch06-models.html">
+                <i class="fa fa-check"></i> <b>7.</b> Models
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="ch07-views.html">
+            
+            <a href="./ch07-views.html">
+                <i class="fa fa-check"></i> <b>8.</b> Views and the DOM
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="ch08-templating.html">
+            
+            <a href="./ch08-templating.html">
+                <i class="fa fa-check"></i> <b>9.</b> Handling templates
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="ch09-clientside-routing.html">
+            
+            <a href="./ch09-clientside-routing.html">
+                <i class="fa fa-check"></i> <b>10.</b> Clientside Routing
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11" data-path="ch10-launch-sequence.html">
+            
+            <a href="./ch10-launch-sequence.html">
+                <i class="fa fa-check"></i> <b>11.</b> 3... 2... 1... Blastoff!
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12" data-path="ch11-testing-and-QA.html">
+            
+            <a href="./ch11-testing-and-QA.html">
+                <i class="fa fa-check"></i> <b>12.</b> Testing and QA
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13" data-path="ch12-settings-and-configs.html">
+            
+            <a href="./ch12-settings-and-configs.html">
+                <i class="fa fa-check"></i> <b>13.</b> Settings and configs
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14" data-path="ch13-caveats.html">
+            
+            <a href="./ch13-caveats.html">
+                <i class="fa fa-check"></i> <b>14.</b> Caveats/Gotchas
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="15" data-path="ch14-conclusion.html">
+            
+            <a href="./ch14-conclusion.html">
+                <i class="fa fa-check"></i> <b>15.</b> A few closing thoughts
+            </a>
+            
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Generated using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="page-wrapper" tabindex="-1">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 80%;min-width: 73.33333333333333%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="./index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="./ch00-foreword.html" title="Foreword by Jan Lehnardt" class="chapter done new-chapter" data-progress="1" style="left: 6.666666666666667%;"></a>
+    
+        <a href="./ch01-introduction.html" title="Introduction" class="chapter done new-chapter" data-progress="2" style="left: 13.333333333333334%;"></a>
+    
+        <a href="./ch02-the-big-decision.html" title="Client or server? Go big or go home." class="chapter done new-chapter" data-progress="3" style="left: 20%;"></a>
+    
+        <a href="./ch03-code-for-humans.html" title="Writing code for humans." class="chapter done new-chapter" data-progress="4" style="left: 26.666666666666668%;"></a>
+    
+        <a href="./ch04-organizing-your-code.html" title="No more clientside spaghetti. Organizing your code." class="chapter done new-chapter" data-progress="5" style="left: 33.333333333333336%;"></a>
+    
+        <a href="./ch05-eventification.html" title="Using events: Modules talking to modules" class="chapter done new-chapter" data-progress="6" style="left: 40%;"></a>
+    
+        <a href="./ch06-models.html" title="Models" class="chapter done new-chapter" data-progress="7" style="left: 46.666666666666664%;"></a>
+    
+        <a href="./ch07-views.html" title="Views and the DOM" class="chapter done new-chapter" data-progress="8" style="left: 53.333333333333336%;"></a>
+    
+        <a href="./ch08-templating.html" title="Handling templates" class="chapter done new-chapter" data-progress="9" style="left: 60%;"></a>
+    
+        <a href="./ch09-clientside-routing.html" title="Clientside Routing" class="chapter done " data-progress="10" style="left: 66.66666666666667%;"></a>
+    
+        <a href="./ch10-launch-sequence.html" title="3... 2... 1... Blastoff!" class="chapter done " data-progress="11" style="left: 73.33333333333333%;"></a>
+    
+        <a href="./ch11-testing-and-QA.html" title="Testing and QA" class="chapter done " data-progress="12" style="left: 80%;"></a>
+    
+        <a href="./ch12-settings-and-configs.html" title="Settings and configs" class="chapter  " data-progress="13" style="left: 86.66666666666667%;"></a>
+    
+        <a href="./ch13-caveats.html" title="Caveats/Gotchas" class="chapter  " data-progress="14" style="left: 93.33333333333333%;"></a>
+    
+        <a href="./ch14-conclusion.html" title="A few closing thoughts" class="chapter  " data-progress="15" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_13">
+                    
+                        <h1 id="testing-and-qa-that-doesn-t-suck-so-your-app-won-t-">Testing and QA that doesn&#39;t suck (so your app won&#39;t)</h1>
+<h2 id="the-problem-challenge-of-proper-interface-qa">The problem/challenge of proper interface QA</h2>
+<p>We all know we need to test. While in the building phase of a browser app I find that building an extensive test suite isn&#39;t necessarily worth the effort. Interfaces are inherently hard to test in that the variability of human input is part of what makes a good test for an interface.</p>
+<p>Also, there are things that are just a bit hard to test. For example, if you support drag and drop actions in your interface it&#39;s not so easy to write a test that properly validates that it works well.</p>
+<p>Then there&#39;s the &quot;problem&quot; of CSS changes. The DOM can be in perfect order but if the styles are off things can look quite broken, or you can have a layout issue where a control is covered or unclickable.</p>
+<p>Some people build really elaborate QA systems that load their app into a headless browser and takes screenshots that are compared against reference images, etc. But the amount of effort and setup required for that is simply not practical in most cases.</p>
+<p>There are also tools like Selenium that will script a browser for you, but it&#39;s a whole lot of work and setup, and then every time you want to change something, if your tests are too specific they&#39;ll need to be constantly updated. And if they&#39;re too general they&#39;ll miss stuff.</p>
+<p>While headless browser testing is a really cool idea (PhantomJS, etc.), it doesn&#39;t really help you know how your app works in other browsers.</p>
+<p>Ultimately, I don&#39;t believe you can actually do proper testing of an interface without a human.</p>
+<p>So, there must be a balance that can be struck between human approval and oversight and taking advantage of the things computers are good at like process, consistency, and automation.</p>
+<h2 id="meet-the-spacemonkey">Meet the SpaceMonkey</h2>
+<p>So we&#39;ve been building one, we&#39;re calling it SpaceMonkey. There wasn&#39;t anything out there that did this in a way that was browser-agnostic, simple, and blended automation with human approval.</p>
+<p>We&#39;ve still got a lot of work to do on it to make it awesome, but it&#39;s included in the app generator if you select the &quot;express&quot; option, and it seemed worth mentioning nonetheless.</p>
+<p>It uses QUnit, the clientside testing tool made by the jQuery team. But rather than run simple programmatic tests. It loads your app into an <code>&lt;iframe&gt;</code> and walks you through the QA process that you&#39;ve defined for it. You can automate high-level tests like filling in and submitting forms, etc. But, in addition, at the times you&#39;ve specified it will stop and ask the user for visual verification or to perform some user action such as a drag-and-drop interactions or scrolling-related features that may be hard to test programatically. So some of the unit tests are considered a pass or fail based on a human&#39;s answer to &quot;did it work?&quot;</p>
+<p>This approach makes it possible to define an explicit set of app interactions to test. So it&#39;s like a partially automated QA checklist.</p>
+<p>Testing in other browsers will just involve running through the test sequence in other those other browsers. Using a service like Browserling or BrowserStack lets us walk through this process in whatever browsers we&#39;re targeting.</p>
+<p>SpaceMonkey is still under heavy development, but a <code>clienttests</code> folder and sample QA workflow is included in the app generated by the humanjs app generator.</p>
+<p>You end up writing tests that look like this:</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Load the app into our iframe</span>
+monkey.loadApp(<span class="hljs-string">'/'</span>, {
+    height: <span class="hljs-number">500</span>,
+    width: <span class="hljs-number">600</span>,
+    bugUrl: <span class="hljs-string">'https://github.com/henrikjoreteg/humanjs-sample-app/issues/new'</span>
+});
+
+<span class="hljs-comment">// This is a normal QUnit test</span>
+test(<span class="hljs-string">'basic app experience'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+    <span class="hljs-comment">// Here we start a chain of interactions</span>
+    monkey
+        <span class="hljs-comment">// We can log out messages to the console</span>
+        .log(<span class="hljs-string">'starting'</span>)
+        <span class="hljs-comment">// Wait for things to appear</span>
+        .waitForVisible(<span class="hljs-string">'#pages .page'</span>)
+        <span class="hljs-comment">// Ask for user confirmation</span>
+        .confirm(<span class="hljs-string">'The app loaded to the home page.'</span>)
+        .confirm(<span class="hljs-string">'The "home" nav tab is active'</span>)
+        <span class="hljs-comment">// Navigate to different urls</span>
+        .goToPage(<span class="hljs-string">'/collections'</span>)
+        .confirm(<span class="hljs-string">'Collection demo page visible'</span>)
+        .confirm(<span class="hljs-string">'List of people are visible each with avatars'</span>)
+        <span class="hljs-comment">// We can also provide a set of instructions of something</span>
+        <span class="hljs-comment">// that is about to happen. And instruct the user to look</span>
+        <span class="hljs-comment">// for specific behaviors.</span>
+        .instruct(<span class="hljs-string">'Five users will be added. Please ensure.'</span>, [
+            <span class="hljs-string">'each one is added at the bottom of the list'</span>,
+            <span class="hljs-string">'each has a readable name an avatar'</span>
+        ])
+        <span class="hljs-comment">// Simulate clicks</span>
+        .click(<span class="hljs-string">'button.add'</span>)
+        .click(<span class="hljs-string">'button.add'</span>)
+        .click(<span class="hljs-string">'button.add'</span>)
+        .click(<span class="hljs-string">'button.add'</span>)
+        .click(<span class="hljs-string">'button.add'</span>)
+        .confirm(<span class="hljs-string">'Everything look ok?'</span>)
+        .confirm(<span class="hljs-string">'I can visually re-arrange them by pressing, "shuffle"'</span>)
+        .confirm(<span class="hljs-string">'I can hit reset and they disappear, and fetch and they come back.'</span>)
+        .confirm(<span class="hljs-string">'I can delete them by clicking "delete"'</span>)
+        .goToPage(<span class="hljs-string">'/info'</span>)
+        .confirm(<span class="hljs-string">'Info page is visible'</span>)
+        <span class="hljs-comment">// Call this when done</span>
+        .destroy();
+});
+</code></pre>
+<p>To see it in action:</p>
+<ol>
+<li>Install the app generator using npm: <code>npm i humanjs -g</code></li>
+<li>Run the generator and answer its questions: <code>humanjs</code></li>
+<li>Run the generated app and visit <code>http://localhost:3000/test</code> in a browser</li>
+</ol>
+<p>As I mentioned, we still have a lot of work to do in making SpaceMonkey a well-structured standalone library. But it seemed useful and functional enough to include.</p>
+<p>And if nothing else, the general idea might be enough to tempt you to build it :)</p>
+<h2 id="unit-testing-modules-that-require-a-browser">Unit testing modules that require a browser</h2>
+<p>For tests that are not QA, but are in fact unit tests, you need a way to write tests that will run in a browser and ideally, we&#39;d be able to run them from the command line.</p>
+<p>Turns out, we can. Using a set of tools developed largely by <a href="https://twitter.com/substack" target="_blank">James Halliday, a.k.a &quot;substack&quot;</a>.</p>
+<p>Here&#39;s a sample from ampersand-state:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> test = <span class="hljs-built_in">require</span>(<span class="hljs-string">'tape'</span>);
+<span class="hljs-keyword">var</span> State = <span class="hljs-built_in">require</span>(<span class="hljs-string">'../ampersand-state'</span>);
+
+<span class="hljs-keyword">var</span> Person = State.extend({
+    props: {
+        name: <span class="hljs-string">'string'</span>
+    }
+});
+
+test(<span class="hljs-string">'init with values'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(t)</span> {</span>
+    <span class="hljs-keyword">var</span> person = <span class="hljs-keyword">new</span> Person({name: <span class="hljs-string">'henrik'</span>});
+    t.ok(person);
+    t.equal(person.name, <span class="hljs-string">'henrik'</span>);
+    t.end();
+});
+
+test(<span class="hljs-string">'after init, change should be empty until a set op'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(t)</span> {</span>
+    <span class="hljs-keyword">var</span> person = <span class="hljs-keyword">new</span> Person({name: <span class="hljs-string">'phil'</span>});
+    t.deepEqual(person._changed, {});
+    t.notOk(person.changedAttributes());
+    t.end();
+});
+</code></pre>
+<p>The &quot;tape&quot; module is capable of running in the browser or the server with browserify.</p>
+<p>So, with the help of a few handy dev dependencies, we can run our tests in phantom.js, or in a browser.</p>
+<p>First, run the following to install a few dependencies we&#39;ll need:</p>
+<pre><code>npm i --save-dev run-browser browserify tape-run
+</code></pre><p>This will install them and save them as <code>devDependencies</code> in your package.json.</p>
+<p>Next, we can add some scripts to our package.json like this:</p>
+<pre><code class="lang-json">  ...
+  &quot;scripts&quot;: {
+    &quot;start&quot;: &quot;run-browser test/index.js&quot;,
+    &quot;test&quot;: &quot;browserify test/index.js | tape-run&quot;
+  },
+  ...
+</code></pre>
+<p>With this setup we can run <code>npm start</code> and open <code>localhost:3000</code> in whatever browser we want to run the tests in.</p>
+<p>We can also just run <code>npm test</code> and it will run it with phantom.js (which you may have to go install separately if you don&#39;t already have it) and you should see the same type of output in your terminal.</p>
+<p>This output format is a standard test output format called <a href="http://en.wikipedia.org/wiki/Test_Anything_Protocol" target="_blank">TAP</a>.</p>
+<p>As a result, there are various tools to dress up that output. So, if you want prettier terminal output, you can also install <code>tap-spec</code> from npm and update your &quot;test&quot; script to look like this:</p>
+<pre><code class="lang-json">&quot;test&quot;: &quot;browserify test/index.js | tape-run | tap-spec&quot;
+</code></pre>
+<p>By using tape and writing tests in this way, we can also use a service like <a href="https://ci.testling.com/" target="_blank">testling</a> that runs our tests in different browsers for us. </p>
+<p>Testling can be configured to automatically run our test suite using the list of browsers that we specify each time we push to github. This approach is extremely helpful when developing small modules for use in a browser. See the <a href="https://ci.testling.com/guide/quick_start" target="_blank">testling quick start guide</a> for more info on how to set this up for your project.</p>
+<p>For a full working example of these tools being used, see <a href="https://github.com/AmpersandJS/ampersand-view" target="_blank">ampersand-view</a> or almost any of the <a href="http://ampersandjs.com" target="_blank">ampersand.js tools</a>.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./ch10-launch-sequence.html" class="navigation navigation-prev " aria-label="Previous page: 3... 2... 1... Blastoff!"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./ch12-settings-and-configs.html" class="navigation navigation-next " aria-label="Next page: Settings and configs"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

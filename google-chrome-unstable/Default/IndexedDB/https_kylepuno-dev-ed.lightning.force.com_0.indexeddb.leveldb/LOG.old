@@ -1,0 +1,18 @@
+2016/11/28-14:34:03.496 1174 Reusing MANIFEST /home/kylepuno/.config/google-chrome-unstable/Default/IndexedDB/https_kylepuno-dev-ed.lightning.force.com_0.indexeddb.leveldb/MANIFEST-000001
+2016/11/28-14:34:03.496 1174 Recovering log #92
+2016/11/28-14:34:03.500 1174 Reusing old log /home/kylepuno/.config/google-chrome-unstable/Default/IndexedDB/https_kylepuno-dev-ed.lightning.force.com_0.indexeddb.leveldb/000092.log 
+2016/11/28-14:34:05.431 1804 Compacting 1@1 + 1@2 files
+2016/11/28-14:34:05.450 1804 Generated table #95@1: 1003 keys, 1361743 bytes
+2016/11/28-14:34:05.450 1804 Compacted 1@1 + 1@2 files => 1361743 bytes
+2016/11/28-14:34:05.451 1804 compacted to: files[ 0 0 1 0 0 0 0 ]
+2016/11/28-14:34:05.451 1804 Delete type=2 #93
+2016/11/28-14:34:05.452 1804 Delete type=2 #91
+2016/11/28-14:34:08.513 1804 Level-0 table #97: started
+2016/11/28-14:34:08.540 1804 Level-0 table #97: 3790621 bytes OK
+2016/11/28-14:34:08.542 1804 Delete type=0 #92
+2016/11/28-14:39:46.614 1804 Compacting 1@1 + 1@2 files
+2016/11/28-14:39:46.641 1804 Generated table #98@1: 1178 keys, 1439613 bytes
+2016/11/28-14:39:46.641 1804 Compacted 1@1 + 1@2 files => 1439613 bytes
+2016/11/28-14:39:46.643 1804 compacted to: files[ 0 0 1 0 0 0 0 ]
+2016/11/28-14:39:46.643 1804 Delete type=2 #97
+2016/11/28-14:39:46.644 1804 Delete type=2 #95

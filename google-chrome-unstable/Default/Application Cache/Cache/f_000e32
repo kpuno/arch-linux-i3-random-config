@@ -1,0 +1,803 @@
+<!DOCTYPE HTML>
+<html lang="en-US" manifest="./manifest.appcache">
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <title>Models | Human JavaScript</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 0.5.2">
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          ga('create', 'UA-1196801-11', 'auto');
+          ga('send', 'pageview');
+        </script>
+        <script>
+          !function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(
+          arguments)};d=s.createElement(q);q=s.getElementsByTagName(q)[0];
+          d.src='http://d1l6p2sc9645hc.cloudfront.net/tracker.js';q.parentNode.
+          insertBefore(d,q)}(window,document,'script','_gs');
+          _gs('GSN-555504-T', false);
+          _gs('set', 'cookieDomain', '.humanjavascript.com');
+          _gs('track');
+        </script>
+        
+    
+    
+    <meta name="author" content="HenrikJoreteg">
+    
+    
+    <link rel="next" href="./ch07-views.html" />
+    
+    
+    <link rel="prev" href="./ch05-eventification.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+<link rel="stylesheet" href="gitbook/style.css">
+
+
+        
+    <div class="book" data-github="HenrikJoreteg/human-javascript" data-level="7" data-basepath="." data-revision="1428642973331">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
+    <span id="font-settings-wrapper">
+        <a href="#" class="btn pull-left toggle-font-settings" aria-label="Toggle font settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="btn-group btn-block">
+        <button id="reduce-font-size" class="btn btn-default">A</button>
+        <button id="enlarge-font-size" class="btn btn-default">A</button>
+    </div>
+
+    <ul class="list-group font-family-list">
+        <li class="list-group-item" data-font="0">Serif</li>
+        <li class="list-group-item" data-font="1">Sans</li>
+    </ul>
+
+    <div class="btn-group btn-group-xs btn-block color-theme-list">
+        <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
+        <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
+        <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </span>
+
+    <!-- Actions Right -->
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Share on Google Plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="http://twitter.com/home?status=I'm%20reading%20Human%20JavaScript%20by%20%40HenrikJoreteg.%0A%0AA%20free%20online%20book%20on%20building%20sane%20JavaScript%20apps%3A%20http%3A%2F%2Fread.humanjavascript.com" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" aria-label="Share on Twitter"><i class="fa fa-twitter"></i></a>
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-spinner fa-spin"></i>
+        <a href="./" >Human JavaScript</a>
+    </h1>
+</div>
+
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://gumroad.com/l/humanjs" target="blank">Buy the e-book</a>
+        </li>
+        <li>
+            <a href="http://learn.humanjavascript.com" target="blank">Video Tutorials</a>
+        </li>
+        <li>
+            <a href="http://ampersandjs.com" target="blank">Ampersand.js</a>
+        </li>
+        <li>
+            <a href="http://twitter.com/henrikjoreteg" target="blank">Follow @HenrikJoreteg</a>
+        </li>
+
+        <li class="divider"></li>
+
+        <li data-level="0" data-path="index.html">
+            <a href="./"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+    
+        <li class="chapter " data-level="1" data-path="ch00-foreword.html">
+            
+            <a href="./ch00-foreword.html">
+                <i class="fa fa-check"></i> <b>1.</b> Foreword by Jan Lehnardt
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="ch01-introduction.html">
+            
+            <a href="./ch01-introduction.html">
+                <i class="fa fa-check"></i> <b>2.</b> Introduction
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="ch02-the-big-decision.html">
+            
+            <a href="./ch02-the-big-decision.html">
+                <i class="fa fa-check"></i> <b>3.</b> Client or server? Go big or go home.
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="ch03-code-for-humans.html">
+            
+            <a href="./ch03-code-for-humans.html">
+                <i class="fa fa-check"></i> <b>4.</b> Writing code for humans.
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="ch04-organizing-your-code.html">
+            
+            <a href="./ch04-organizing-your-code.html">
+                <i class="fa fa-check"></i> <b>5.</b> No more clientside spaghetti. Organizing your code.
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="ch05-eventification.html">
+            
+            <a href="./ch05-eventification.html">
+                <i class="fa fa-check"></i> <b>6.</b> Using events: Modules talking to modules
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="ch06-models.html">
+            
+            <a href="./ch06-models.html">
+                <i class="fa fa-check"></i> <b>7.</b> Models
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="ch07-views.html">
+            
+            <a href="./ch07-views.html">
+                <i class="fa fa-check"></i> <b>8.</b> Views and the DOM
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="ch08-templating.html">
+            
+            <a href="./ch08-templating.html">
+                <i class="fa fa-check"></i> <b>9.</b> Handling templates
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="ch09-clientside-routing.html">
+            
+            <a href="./ch09-clientside-routing.html">
+                <i class="fa fa-check"></i> <b>10.</b> Clientside Routing
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11" data-path="ch10-launch-sequence.html">
+            
+            <a href="./ch10-launch-sequence.html">
+                <i class="fa fa-check"></i> <b>11.</b> 3... 2... 1... Blastoff!
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12" data-path="ch11-testing-and-QA.html">
+            
+            <a href="./ch11-testing-and-QA.html">
+                <i class="fa fa-check"></i> <b>12.</b> Testing and QA
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13" data-path="ch12-settings-and-configs.html">
+            
+            <a href="./ch12-settings-and-configs.html">
+                <i class="fa fa-check"></i> <b>13.</b> Settings and configs
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14" data-path="ch13-caveats.html">
+            
+            <a href="./ch13-caveats.html">
+                <i class="fa fa-check"></i> <b>14.</b> Caveats/Gotchas
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="15" data-path="ch14-conclusion.html">
+            
+            <a href="./ch14-conclusion.html">
+                <i class="fa fa-check"></i> <b>15.</b> A few closing thoughts
+            </a>
+            
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Generated using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="page-wrapper" tabindex="-1">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 46.666666666666664%;min-width: 40%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="./index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="./ch00-foreword.html" title="Foreword by Jan Lehnardt" class="chapter done new-chapter" data-progress="1" style="left: 6.666666666666667%;"></a>
+    
+        <a href="./ch01-introduction.html" title="Introduction" class="chapter done new-chapter" data-progress="2" style="left: 13.333333333333334%;"></a>
+    
+        <a href="./ch02-the-big-decision.html" title="Client or server? Go big or go home." class="chapter done new-chapter" data-progress="3" style="left: 20%;"></a>
+    
+        <a href="./ch03-code-for-humans.html" title="Writing code for humans." class="chapter done new-chapter" data-progress="4" style="left: 26.666666666666668%;"></a>
+    
+        <a href="./ch04-organizing-your-code.html" title="No more clientside spaghetti. Organizing your code." class="chapter done new-chapter" data-progress="5" style="left: 33.333333333333336%;"></a>
+    
+        <a href="./ch05-eventification.html" title="Using events: Modules talking to modules" class="chapter done new-chapter" data-progress="6" style="left: 40%;"></a>
+    
+        <a href="./ch06-models.html" title="Models" class="chapter done new-chapter" data-progress="7" style="left: 46.666666666666664%;"></a>
+    
+        <a href="./ch07-views.html" title="Views and the DOM" class="chapter  new-chapter" data-progress="8" style="left: 53.333333333333336%;"></a>
+    
+        <a href="./ch08-templating.html" title="Handling templates" class="chapter  new-chapter" data-progress="9" style="left: 60%;"></a>
+    
+        <a href="./ch09-clientside-routing.html" title="Clientside Routing" class="chapter  " data-progress="10" style="left: 66.66666666666667%;"></a>
+    
+        <a href="./ch10-launch-sequence.html" title="3... 2... 1... Blastoff!" class="chapter  " data-progress="11" style="left: 73.33333333333333%;"></a>
+    
+        <a href="./ch11-testing-and-QA.html" title="Testing and QA" class="chapter  " data-progress="12" style="left: 80%;"></a>
+    
+        <a href="./ch12-settings-and-configs.html" title="Settings and configs" class="chapter  " data-progress="13" style="left: 86.66666666666667%;"></a>
+    
+        <a href="./ch13-caveats.html" title="Caveats/Gotchas" class="chapter  " data-progress="14" style="left: 93.33333333333333%;"></a>
+    
+        <a href="./ch14-conclusion.html" title="A few closing thoughts" class="chapter  " data-progress="15" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_1">
+                    
+                        <h1 id="models">Models</h1>
+<h2 id="a-simple-example">A simple example</h2>
+<p>Let&#39;s say you have a list of items. When a user clicks on an item, you want to visually mark it as selected. Someone used to building simple apps would probably do something like this:</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Register a click handler on the parent list</span>
+$(<span class="hljs-string">'ul.theList'</span>).delegate(<span class="hljs-string">'click'</span>, <span class="hljs-string">'li'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+  <span class="hljs-comment">// Toggle a class on the clicked item</span>
+  $(<span class="hljs-keyword">this</span>).toggleClass(<span class="hljs-string">'selected'</span>);
+})
+</code></pre>
+<p>So now, clicking on an item will toggle a class. jQuery&#39;s <code>toggleClass()</code> method will check whether it&#39;s already got the class, and add or remove it as necessary. Great! We&#39;re done!</p>
+<p>Err... well typically if you&#39;re going to select something it&#39;s for a reason, right? So our app is going to want to <em>do</em> something with the selected item or items. </p>
+<p>Let&#39;s say the user has selected several things and now wants to delete them by clicking a delete button. No problem, you say, we just add a button handler that find the ones with the selected class and deletes them.</p>
+<pre><code class="lang-javascript">$(<span class="hljs-string">'button.delete'</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+  <span class="hljs-comment">// Get our seletedDOM items, loop through them</span>
+  $(<span class="hljs-string">'ul.theList li.selected'</span>).each(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+    <span class="hljs-comment">// But we also have to have a way to figure out what</span>
+    <span class="hljs-comment">// ID each one of these things represent so we can pass</span>
+    <span class="hljs-comment">// the correct info to the server. So, let's assume we use</span>
+    <span class="hljs-comment">// HTML5 data attributes. Luckily jQuery's data() method</span>
+    <span class="hljs-comment">// reads all those and returns them as an object.</span>
+    <span class="hljs-keyword">var</span> id = $(<span class="hljs-keyword">this</span>).data(<span class="hljs-string">'serverId'</span>);
+    <span class="hljs-keyword">var</span> listId = $(<span class="hljs-keyword">this</span>).data(<span class="hljs-string">'listId'</span>);
+    $.ajax({
+      type: <span class="hljs-string">'delete'</span>,
+      url: <span class="hljs-string">'/lists/'</span> + listId + <span class="hljs-string">'/widgets/'</span> + id,
+      success: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+        <span class="hljs-comment">// Do something</span>
+      },
+      error: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+        <span class="hljs-comment">// Let the user know, somehow</span>
+      }
+    })
+  }); 
+});
+</code></pre>
+<p>Ok, not too terrible, you say? </p>
+<p>Well now what if we&#39;ve got these additional requirements?</p>
+<ol>
+<li>There isn&#39;t just one list, there are several on the page at once. There are some actions that can be performed in bulk, but only for some of the items in some of the lists.</li>
+<li>There are some items you can&#39;t delete, because you don&#39;t have permission to, but you can still select them and annotate them.</li>
+<li>Deleting the item is only one of six different possible actions you can take with each item.</li>
+<li>You have to support full keyboard control, as well as handling mouse clicks. </li>
+<li>You now want to support selecting the top item, holding shift and clicking the bottom one to select a range.</li>
+</ol>
+<h3 id="if-you-continue-this-same-approach-you-re-in-deep-doo-doo">If you continue this same approach, you&#39;re in deep doo doo</h3>
+<p>You can handle adding features to a point. But you will reach a point where you start arguing against adding features, not because you don&#39;t think they&#39;re good ideas, but because you&#39;re scared to implement them because of the headaches and bugs it will inevitably cause.</p>
+<p>Welcome to nearly everyone&#39;s first single page app experience.</p>
+<h3 id="enter-models">Enter Models</h3>
+<p>If you&#39;ve never used models in clientside code, it&#39;s not as intimidating as it may sound. The idea is simply that we create some data structures in the browser, separate from the DOM, that hold the data that we got from the server as well as any client specific data or state. </p>
+<p>The &quot;selected&quot; state as described above is a good example of client-specific state, meaning when we go to update an entry in the API, we&#39;re not going to send <code>{selected: true}</code> as one of its properties. The server doesn&#39;t care about that, it&#39;s just used to track the state of the user interface.</p>
+<p>So, what is a model anyway? What does it give us?</p>
+<p>The fundamental thing a model should provide is observability. What do I mean? Well, in the same way you can register an event listener in the browser that responds to a form input value changing:</p>
+<pre><code class="lang-javascript">document.getElementById(<span class="hljs-string">'myInput'</span>).addEventListener(<span class="hljs-string">'change'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+  <span class="hljs-comment">// Do something with the value</span>
+});
+</code></pre>
+<p>A model should let us listen for changes to its properties:</p>
+<pre><code class="lang-javascript">model.on(<span class="hljs-string">'change:selected'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(newValue)</span> {</span>
+  <span class="hljs-comment">// Do something with the new value</span>
+});
+</code></pre>
+<p>In addition, models should contain functionality that makes it easy for us to work with that data. That means things like exposing some processed form of the data, should be a method on the model. Let&#39;s say one of the model properties represents a date. We may have a method on the model for getting a nicely formatted date string built from that date object. Arguably this is a presentation issue, but the model ends up being a logical place to expose a string version of the date property for maximum re-use and consistency.</p>
+<p>In addition, models are a good place for methods that perform actions on the model itself, like updating the server when the model changes.</p>
+<p>In <a href="https://andbang.com" target="_blank">And Bang</a>, we do a lot with tasks. You can assign them to each other, &quot;ship&quot; them, &quot;later&quot; them, &quot;trash&quot; them, etc.</p>
+<p>So, each of these actions are represented by a method on the task model that sends the correct data to the server, as well as updating the appropriate properties on the local model. </p>
+<p>For example, here&#39;s the <code>trash</code> method of a task in And Bang:</p>
+<pre><code class="lang-javascript">...
+},
+trash: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+  <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.deleteable) {
+    <span class="hljs-keyword">this</span>.removing = <span class="hljs-literal">true</span>;
+    <span class="hljs-keyword">this</span>.api(<span class="hljs-string">'deleteTask'</span>);
+  }
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.deleteable;
+},
+...
+</code></pre>
+<p>It includes an upfront check to see whether we even have permission to trash this item. In case you&#39;re wondering this isn&#39;t actually used to enforce this permission, that&#39;s the API&#39;s job. </p>
+<p>In fact, that&#39;s worth a little tangent to drive home the purpose of an API. It&#39;s <em>always</em> the API&#39;s job to maintain its own data integrity. You shouldn&#39;t <em>ever</em> be able to do anything in the client code that puts your API data in a weird or broken state. For example, never leave it up to your client code to know that if you delete a list you also have to go delete all the items in the list. That&#39;s the API&#39;s job.</p>
+<p>Continuing... calling the <code>trash</code> method sets a local state property <code>removing</code> and then calls the API method that sends the command to the server to delete the task (in this case via WebSocket, but the transport is irrelevant).</p>
+<p>But the cool thing is, that&#39;s <em>it</em>. That&#39;s all we have to do when we want to delete a widget. You simply have to look up the widget&#39;s model and call <code>.trash()</code>. </p>
+<p>Nowhere in this code do you see anything about removing the item from DOM.</p>
+<p>That happens when we get confirmation from the API that the task was removed. It is then removed from the collection, which triggers a <code>remove</code> event on the collection and the view (which represents the DOM, as described in the next chapter) listens for <code>remove</code> events and plucks that list item out of the DOM. It may sound a bit complex, but only in that you have to describe all those relationships. Once you have it&#39;s beautifully simple. </p>
+<p>Assuming we&#39;ve got a view that represents that model, the view would have a click handler like this:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> Backbone = <span class="hljs-built_in">require</span>(<span class="hljs-string">'backbone'</span>);
+
+module.exports = Backbone.View.extend({
+  <span class="hljs-comment">// Our events hash (explained in the next chapter)</span>
+  events: {
+    <span class="hljs-string">'click .delete'</span>: <span class="hljs-string">'handleDeleteClick'</span>
+  },
+  <span class="hljs-comment">// Our handler simply calls "trash", nothing more</span>
+  handleDeleteClick: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+    <span class="hljs-keyword">this</span>.model.trash();
+  },
+  ...
+})
+</code></pre>
+<p>Alternately, you can simply open the JS console in your browser and type:</p>
+<pre><code class="lang-javascript">&gt; app.currentTeam.tasks.get(<span class="hljs-string">'someId'</span>).trash();
+</code></pre>
+<p>And you&#39;ll see that everything still happens exactly the same as if you had clicked to delete. The task will be deleted on the server and removed from the DOM.</p>
+<h2 id="using-models-for-everything">Using models for everything</h2>
+<p>As the app becomes more complex the failure to store all state in one (and only one) place in your app will be the source of the sorts of bugs that drive you to give up development and take up gardening.</p>
+<p>So, what do I mean by storing <em>all</em> the state in your app? It&#39;s quite easy. If you find yourself checking whether something has a class or not, and using that to determine a course of action, you&#39;re doing it wrong. </p>
+<p>There are two simple rules:</p>
+<ol>
+<li><p>All input, whether from the user or from an API, <em>never</em> does anything other than call a method or update a property of your models.</p>
+</li>
+<li><p>Always use your models as the &quot;source of truth&quot; in your app. Never &quot;look up&quot; state information anywhere other than your models.</p>
+</li>
+</ol>
+<h3 id="applying-this-approach-to-our-widget-example">Applying this approach to our widget example</h3>
+<p>Let&#39;s think about the data first, before we think about the behavior. These items in the list represent something. Let&#39;s model <em>that</em> before we think about how they&#39;ll be presented. Let&#39;s just make a collection of models representing the items in the list. </p>
+<p><code>models/widgetCollection.js</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> Backbone = <span class="hljs-built_in">require</span>(<span class="hljs-string">'backbone'</span>);
+<span class="hljs-keyword">var</span> WidgetModel = <span class="hljs-built_in">require</span>(<span class="hljs-string">'./models/widget'</span>)
+
+<span class="hljs-comment">// Our main export from this module (just the collection)</span>
+module.exports = Backbone.Collection.extend({
+  <span class="hljs-comment">// Specify the model type for this collection</span>
+  model: WidgetModel,
+  <span class="hljs-comment">// The RESTful API URL representing this resource</span>
+  url: <span class="hljs-string">'/widgets'</span>
+});
+</code></pre>
+<p><code>models/widget.js</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> AmpersandModel = <span class="hljs-built_in">require</span>(<span class="hljs-string">'ampersand-model'</span>);
+
+module.exports = AmpersandModel.extend({
+  <span class="hljs-comment">// We give our model a type</span>
+  type: <span class="hljs-string">'widget'</span>,
+  <span class="hljs-comment">// Define properties, these are the ones</span>
+  <span class="hljs-comment">// that live on the server-side</span>
+  props: {
+    id: [<span class="hljs-string">'string'</span>, <span class="hljs-literal">true</span>],
+    widgetType: [<span class="hljs-string">'string'</span>, <span class="hljs-literal">true</span>, <span class="hljs-string">'dooDad'</span>]
+  },
+  <span class="hljs-comment">// Session properties are just like props but</span>
+  <span class="hljs-comment">// exist for the purpose of storing client-side</span>
+  <span class="hljs-comment">// state.</span>
+  session: {
+    selected: [<span class="hljs-string">'boolean'</span>, <span class="hljs-literal">true</span>, <span class="hljs-literal">false</span>]
+  }
+});
+</code></pre>
+<p>At this point we can do something like this in our application launch code:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> WidgetCollection = <span class="hljs-built_in">require</span>(<span class="hljs-string">'models/widgets'</span>);
+
+<span class="hljs-comment">// Assume this is the app's entry point</span>
+module.exports = {
+  blastoff: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+    <span class="hljs-comment">// Create our one global that holds the app</span>
+    window.app = <span class="hljs-keyword">this</span>;
+
+    <span class="hljs-comment">// Attach our widget collection here</span>
+    <span class="hljs-keyword">this</span>.widgets = <span class="hljs-keyword">new</span> WidgetCollection();
+    <span class="hljs-comment">// Assumes you've got things set up so </span>
+    <span class="hljs-comment">// this will do an AJAX (or some other type) call</span>
+    <span class="hljs-comment">// and populate the collection.</span>
+    <span class="hljs-keyword">this</span>.widgets.fetch();
+  }
+};
+</code></pre>
+<p>So now we&#39;ve got a representation of that list of widgets that assumes nothing about how it&#39;s going to be used.</p>
+<p>Stop for a second and think about what that does for us when requirements change or even when we go build a second application on the same API. Nearly <em>all</em> the model code will be re-usable with zero changes. It simply represents the state that is available in the API, which is the same no matter what the interface looks like. </p>
+<p>Also, think about this in a team environment. Someone can be working on writing models and making sure they get the proper data populated from the API while someone is building the clientside router and page views that include and design &quot;static&quot; versions of page elements that will be rendered by models once the API is hooked up. Because they&#39;re all in separate files you won&#39;t step on each other&#39;s toes and merging the combined code in git won&#39;t result in any major merge conflicts. </p>
+<p>Just imagine the sort of impact this has for a team to be able to work in parallel and to write code that doesn&#39;t need to be thrown away the minute someone wants to change the layout of the app.</p>
+<p>In fact, that basic model layer and API synchronization can be created before we even have a final app design.</p>
+<h3 id="model-alternatives">Model alternatives</h3>
+<p>In order to provide observability, models generally provide some sort of event registration system and a way to set and get some &quot;protected&quot; attributes.</p>
+<p>For a long time, I used Backbone models for everything. The code for them is quite simple and readable (YES!); they&#39;re also flexible and easy to use. Also, I&#39;m generally a big fan of Backbone&#39;s principles and structure.</p>
+<p>Yet, you&#39;ll notice the examples all use <code>AmpersandModel</code> instead of <code>Backbone.Model</code>.</p>
+<p>Despite our love for Backbone at &amp;yet, a few things finally drove us to create <a href="http://ampersandjs.com/" target="_blank">Ampersand.js</a>.</p>
+<p>Backbone is brilliantly simple and solves many common problems in developing clientside applications. But we missed the focused simplicity of tiny modules in node-land.</p>
+<p>We wanted something similar in style and philosophy, but that fully embraced tiny modules, npm, and browserify. For more info on those tools check out the <a href="http://ampersandjs.com/" target="_blank">Ampersand.js site</a>.</p>
+<p>The specific things we wanted from models are:</p>
+<h4 id="1-readability">1. Readability</h4>
+<p>If the models are the core of our application (as they should be), someone should be able to open the code for the model and <em>read</em> what properties it stores and what types those properties have. This is <em>huge</em> for enabling people to jump in and contribute to a project.</p>
+<h4 id="2-derived-properties">2. Derived properties</h4>
+<p>So often, the data you get from the server is not in the format you&#39;ll want to present it. The classic example is first and last name. Most likely they come as separate fields from the API, but in reality, most places you&#39;re going to present a user&#39;s name in the app will be in the format: <code>firstName + &#39; &#39; + lastName</code>. In Backbone you&#39;d perhaps create a method called <code>fullName()</code> that when called, returned that value to you. The annoying thing comes when you want to bind that value to some location in the DOM. You have to listen for changes to either <code>firstName</code> or <code>lastName</code> and then call the method again and put the result into the DOM. There are two things I don&#39;t like about this: </p>
+<ol>
+<li><p>It <em>feels</em> like <code>fullName</code> or even just <code>name</code> should just be accessible in the same way as first or last name. Why can&#39;t I just go <code>user.name</code>?</p>
+</li>
+<li><p>I want to be able to listen for changes in one place. So, instead of <code>model.on(&#39;change:firstName change:lastName&#39;, doSomething)</code> it seems like I should be able to just listen for changes to <code>change:name</code> and have the model be smart enough to know that if either first or last name changes, call that handler too. </p>
+</li>
+</ol>
+<h4 id="3-direct-access-to-properties">3. Direct access to properties</h4>
+<p>In a large app, you work with models <strong>a lot</strong>. Having to call <code>get</code> and <code>set</code> everywhere is a bit less than ideal, IMO. ECMAScript 5 (a.k.a. the version of the JS spec available in modern browsers) allows for <code>getters</code> and <code>setters</code> which means you can actually process simple assignments. This is better illustrated with an example:</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Without getters/setters (Backbone Model)</span>
+model.set(<span class="hljs-string">'firstName'</span>, <span class="hljs-string">'Henrik'</span>);
+
+<span class="hljs-comment">// With getters/setters (AmpersandModel)</span>
+model.firstName = <span class="hljs-string">'Henrik'</span>;
+</code></pre>
+<p>What do I mean? You can already set whatever properties you want directly on an object even without getter/setters, right?!</p>
+<p>YES! But not in a way that can be observed.</p>
+<p>Getters and setters allow us to trigger those <code>change</code> events even when properties are set directly:</p>
+<pre><code class="lang-javascript">model.on(<span class="hljs-string">'change:firstName'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+  console.log(<span class="hljs-string">'firstName changed!'</span>); 
+});
+
+<span class="hljs-comment">// Even when setting the attribute directly the callback </span>
+<span class="hljs-comment">// registered above would still be called.</span>
+model.firstName = <span class="hljs-string">'Henrik'</span>;
+</code></pre>
+<p>Getters and setters give us enormous flexibility, which can be bad. For example, we can make a getter run whatever code we want and return anything whenever we access a property.</p>
+<pre><code class="lang-javascript">trickyModel.firstName = <span class="hljs-string">'Henrik'</span>;
+
+console.log(trickyModel.firstName); 
+<span class="hljs-comment">// We can make this log out *whatever* the heck we want</span>
+<span class="hljs-comment">// despite it appearing to just have been assigned above.</span>
+</code></pre>
+<h5 id="quick-note-on-how-to-use-getters-setters">Quick note on how to use getters/setters</h5>
+<p>Be sure to read the warning below, but for those not familiar, it may be useful to have a bit of an explanation of how getters and setters are written. There are two syntax options.</p>
+<p>The first is using the <code>get</code> and <code>set</code> operators directly to define those methods:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> myObject: {
+  _properties: {},
+  get name () {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._properties.name;
+  },
+  set name (value) {
+    <span class="hljs-keyword">this</span>._properties.name = value;
+  }
+}
+</code></pre>
+<p>The second is using <code>Object.defineProperty()</code>:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> myObject = {
+  _properties: {}
+};
+
+<span class="hljs-built_in">Object</span>.defineProperty(myObject, <span class="hljs-string">"name"</span>, {
+  get: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._properties.name;
+  },
+  set: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(value)</span> {</span>
+    <span class="hljs-keyword">this</span>._properties.name = value;
+  }
+});
+
+<span class="hljs-comment">// There's also a defineProperties (plural)</span>
+<span class="hljs-built_in">Object</span>.defineProperties(myObject, {
+  lastName: {
+    get: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span> ... },
+    set: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span> ... }
+  },
+  fullName: {
+    get: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span> ... },
+    set: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span> ... }
+  }
+})
+</code></pre>
+<h5 id="warning-">Warning!</h5>
+<p>As you can imagine this power gives you a <em>lot</em> of rope to hang yourself with and thus, this capability should be used <em>very</em> cautiously.</p>
+<p>Some argue, and I can see their point, that using this is too much magic. If that&#39;s how you feel. Luckily, in our happy modular world, you can just use plain Backbone models.</p>
+<p>However, I happen to think that in the case of models getters/settings can actually make our code more fault tolerant and more readable. But, I <em>only</em> use them for model properties and only in predictable ways.</p>
+<h4 id="4-type-enforcement">4. Type enforcement</h4>
+<p>JavaScript, the language is dynamically typed, which is awesome. But we&#39;ve said we&#39;re making our models the <em>core</em> of the app. Knowing that a given property is a given type is quite useful for eliminating silly bugs and protecting ourselves. </p>
+<p>Let&#39;s compare the two with a simple user model. In Backbone there is no standard way to define a property. Instead, you simply set a value as if it exists and now it does. </p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Backbone model, no definition needed.</span>
+<span class="hljs-comment">// There *is* no standard way to even</span>
+<span class="hljs-comment">// define the properties it should store.</span>
+<span class="hljs-keyword">var</span> model = <span class="hljs-keyword">new</span> Backbone.Model();
+
+model.set({
+  firstName: <span class="hljs-string">'Henrik'</span>,
+  lastName: <span class="hljs-string">'Joreteg'</span>
+});
+
+<span class="hljs-comment">// Now I can get those</span>
+model.get(<span class="hljs-string">'firstName'</span>); <span class="hljs-comment">// logs out 'Henrik'</span>
+</code></pre>
+<p>Simple, elegant, flexible. But, assuming I set these values in some view code somewhere in another part of a large app, how do I know what attributes I have available to me or what they&#39;re called?</p>
+<p>If I&#39;m hitting an API to get my data and using the resulting data to set attributes on models, I have two options for figuring out what data I&#39;m storing and what data I have available to my views. I either inspect the request to know what properties I&#39;m supposed to have or inspect it in the console at runtime to see what properties my model contains and what their names are. </p>
+<p>That doesn&#39;t seem very developer friendly. </p>
+<p>Just think how much information I&#39;m missing:</p>
+<ol>
+<li>What properties do I have?</li>
+<li>What type of values do those properties contain?</li>
+<li>Can I trust that this property will always contain a value?</li>
+<li>Is this a property client state or data we got from the server?</li>
+<li>When I go to update the model on the server, which properties should be sent? </li>
+<li>Is a property computed from other properties, if so, how do I keep it up to date?</li>
+<li>Perhaps most importantly, where do I go to find the answers to the questions above?</li>
+</ol>
+<p>Sure the following example is silly, but what if I write some stupid code (as we do sometimes, amirite humans?!).</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// There's nothing stopping you from setting </span>
+<span class="hljs-comment">// the firstName property to be a date object.</span>
+model.set(<span class="hljs-string">'firstName'</span>, <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>());
+</code></pre>
+<p>Sure, you may be able to keep it all in your head to a point, but what about when a second developer comes and looks at that code? Or what happens when you come back to the code after six months (or even two weeks)? Where do you go to see how the app is structured? You have to go spelunking into views for answers.</p>
+<p>I prefer that the model is the explicit documentation on what state is stored. </p>
+<p>See how this could be in AmpersandModel:</p>
+<p>file: <code>models/user.js</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> AmpersandModel = <span class="hljs-built_in">require</span>(<span class="hljs-string">'ampersand-model'</span>);
+
+module.exports = AmpersandModel.extend({
+  type: <span class="hljs-string">'user'</span>,
+  <span class="hljs-comment">// Our properties from the server</span>
+  props: {
+    <span class="hljs-comment">// Here is the shorthand syntax for defining a property:</span>
+    <span class="hljs-comment">// first is type, second is required, last is default value.</span>
+    firstName: [<span class="hljs-string">'string'</span>, <span class="hljs-literal">true</span>, <span class="hljs-string">''</span>],
+    lastName: [<span class="hljs-string">'string'</span>, <span class="hljs-literal">true</span>, <span class="hljs-string">''</span>],
+    <span class="hljs-comment">// You can also be even more explicit</span>
+    <span class="hljs-comment">// and pass an object</span>
+    middleName: {
+      type: <span class="hljs-string">'string'</span>,
+      required: <span class="hljs-literal">true</span>,
+      <span class="hljs-keyword">default</span>: <span class="hljs-string">''</span>
+    },
+    <span class="hljs-comment">// Or less specific the minimum </span>
+    <span class="hljs-comment">// you need is a type, for example:</span>
+    isAwesome: <span class="hljs-string">'boolean'</span>
+  },
+  <span class="hljs-comment">// Session properties are defined and work exactly</span>
+  <span class="hljs-comment">// the same way as properties. The difference is </span>
+  <span class="hljs-comment">// they're not sent to the server on save(), etc.</span>
+  session: {
+    selected: [<span class="hljs-string">'boolean'</span>, <span class="hljs-literal">true</span>, <span class="hljs-literal">false</span>]
+  },
+  <span class="hljs-comment">// Derived properties are getters constructed from</span>
+  <span class="hljs-comment">// other information. (You cannot set a derived property, this is intentional)</span>
+  derived: {
+    <span class="hljs-comment">// The name of the derived property.</span>
+    <span class="hljs-comment">// In this case referencing "model.fullName"</span>
+    <span class="hljs-comment">// would give us the result of calling the</span>
+    <span class="hljs-comment">// function below</span>
+    fullName: {
+      <span class="hljs-comment">// We specify which properties</span>
+      <span class="hljs-comment">// this is dependent on (meaning if they change</span>
+      <span class="hljs-comment">// so does the derived property)</span>
+      deps: [<span class="hljs-string">'firstName'</span>, <span class="hljs-string">'lastName'</span>],
+      fn: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+        <span class="hljs-keyword">return</span> (<span class="hljs-keyword">this</span>.firstName + <span class="hljs-string">' '</span> + <span class="hljs-keyword">this</span>.lastName).trim();
+      },
+      <span class="hljs-comment">// The result is intelligently cached by default which means </span>
+      <span class="hljs-comment">// it won't run the function unless one of the dependency values</span>
+      <span class="hljs-comment">// has changed since and it won't trigger a `change` on the</span>
+      <span class="hljs-comment">// derived value unless the new derived value is actually different.</span>
+      <span class="hljs-comment">// By only firing change events when derived values change can lead to </span>
+      <span class="hljs-comment">// dramatic performance improvements over plain Backbone.</span>
+      <span class="hljs-comment">// We can set this to false too, of course, and the result would</span>
+      <span class="hljs-comment">// never be cached.</span>
+      cache: <span class="hljs-literal">true</span> 
+    }
+  }
+});
+</code></pre>
+<p>file: <code>hypothetical_app.js</code></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Grab our user definition from above</span>
+<span class="hljs-keyword">var</span> User = <span class="hljs-built_in">require</span>(<span class="hljs-string">'./models/user'</span>);
+
+<span class="hljs-comment">// Create an instance of that user model</span>
+<span class="hljs-keyword">var</span> model = <span class="hljs-keyword">new</span> User();
+
+<span class="hljs-comment">// I can now know that it's got a value for firstName</span>
+console.log(model.firstName); <span class="hljs-comment">// prints: ''</span>
+
+<span class="hljs-comment">// and it's a predictable type</span>
+console.log(<span class="hljs-keyword">typeof</span> model.firstName); <span class="hljs-comment">// prints: 'string'</span>
+
+<span class="hljs-comment">// and we can't just set it to something else</span>
+model.firstName = [<span class="hljs-string">'hi'</span>]; <span class="hljs-comment">// &lt;- this won't work and will throw and error</span>
+
+<span class="hljs-comment">// but we can set it as a string</span>
+model.firstName = <span class="hljs-string">'Henrik'</span>;
+console.log(model.firstName); <span class="hljs-comment">// prints: 'Henrik'</span>
+
+<span class="hljs-comment">// Here's the *awesome* part I _can't_ set a property that isn't defined.</span>
+<span class="hljs-comment">// So if I fatfinger the property name, it won't stick.</span>
+<span class="hljs-comment">// *Note what AmpersandModel does when calling `set()` with undeclared attributes</span>
+<span class="hljs-comment">// can be configured. See ampersand-model docs for more.</span>
+model.frstName = <span class="hljs-string">'Henrik'</span>;
+</code></pre>
+<p>By enforcing this level of property definitions we always make sure that our models, which is the &quot;backbone&quot; of the app (<em>wink</em>), are readable pieces of code that help document how the app is put together.</p>
+<h4 id="5-better-handling-of-lists-dates">5. Better handling of lists/dates</h4>
+<p>Another argument for using getters/setters for models is that it makes it possible to observe change to properties that are Objects. At least when using things like arrays and dates as properties.</p>
+<p>Since arrays and dates are Objects in JS, they&#39;re passed by reference.</p>
+<p>So, what happens if we want to store a list of IDs as a property of a user?</p>
+<p>In Backbone, how would we get a <code>change</code> event?</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> model = <span class="hljs-keyword">new</span> Backbone.Model();
+
+model.set(<span class="hljs-string">'ids'</span>, [<span class="hljs-string">'23'</span>, <span class="hljs-string">'25'</span>, <span class="hljs-string">'47'</span>]);
+
+<span class="hljs-comment">// If we want to get them and change them</span>
+<span class="hljs-keyword">var</span> myIds = model.get(<span class="hljs-string">'ids'</span>);
+
+<span class="hljs-comment">// If we now change it...</span>
+myIds.reverse();
+
+<span class="hljs-comment">// ...and set it back</span>
+model.set(<span class="hljs-string">'ids'</span>, myIds);
+
+<span class="hljs-comment">// we would never get a change event from Backbone</span>
+</code></pre>
+<p>If you understand JavaScript you&#39;ll realize this isn&#39;t a flaw in Backbone, it&#39;s just because JavaScript passes objects by reference. </p>
+<p>As a result, when Backbone gets the &quot;set&quot; event it just compares <code>this.get(&#39;ids&#39;) === newIds</code> which will always be true, because you&#39;re comparing the same object not a copy of it.</p>
+<p>The same is true with dates. If you get a date object, call a method on it, like <code>setHours()</code> and set it back, you&#39;d never get a change event. So you wouldn&#39;t know you need to update your view. </p>
+<p>We can solve this with getters/setters in cases where we <em>know</em> we want this behavior by forcing the model to always give us a new object when we access the property.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> AmpersandModel = <span class="hljs-built_in">require</span>(<span class="hljs-string">'ampersand-model'</span>);
+
+<span class="hljs-comment">// Set up a simple model definition</span>
+<span class="hljs-keyword">var</span> DemoModel = AmpersandModel.extend({
+  props: {
+    ids: [<span class="hljs-string">'array'</span>, <span class="hljs-literal">true</span>, []]
+  }
+});
+
+
+<span class="hljs-comment">// Then we use it</span>
+<span class="hljs-keyword">var</span> model = <span class="hljs-keyword">new</span> DemoModel();
+
+<span class="hljs-comment">// Get our array</span>
+<span class="hljs-keyword">var</span> arr = model.ids;
+
+<span class="hljs-comment">// Modify it back</span>
+arr.push(<span class="hljs-string">'something'</span>);
+
+<span class="hljs-comment">// This now triggers a change event</span>
+model.ids = arr;
+</code></pre>
+<h3 id="summarizing-models">Summarizing models</h3>
+<p>Models should contain the following:</p>
+<ol>
+<li>Properties that we get from the API</li>
+<li>Properties that we need in order to track client state (selected, etc.)</li>
+<li>Mechanisms for validating their own data integrity</li>
+<li>Methods we can call to update or delete corresponding models on the server</li>
+<li>Convenient accessors (a.k.a. derived properties) that describe or process the properties in some way to allow re-use</li>
+<li>Child collections (if applicable)</li>
+</ol>
+<p>Models should <em>never</em> contain:</p>
+<ol>
+<li>Anything that manipulates the DOM</li>
+<li>Any DOM event handlers</li>
+</ol>
+<p>You can read a lot more about ampersand-model in the <a href="http://ampersandjs.com/" target="_blank">Ampersand.js docs</a>.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./ch05-eventification.html" class="navigation navigation-prev " aria-label="Previous page: Using events: Modules talking to modules"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./ch07-views.html" class="navigation navigation-next " aria-label="Next page: Views and the DOM"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

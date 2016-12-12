@@ -1,0 +1,421 @@
+<!DOCTYPE HTML>
+<html lang="en-US" manifest="./manifest.appcache">
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <title>Writing code for humans. | Human JavaScript</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 0.5.2">
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          ga('create', 'UA-1196801-11', 'auto');
+          ga('send', 'pageview');
+        </script>
+        <script>
+          !function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(
+          arguments)};d=s.createElement(q);q=s.getElementsByTagName(q)[0];
+          d.src='http://d1l6p2sc9645hc.cloudfront.net/tracker.js';q.parentNode.
+          insertBefore(d,q)}(window,document,'script','_gs');
+          _gs('GSN-555504-T', false);
+          _gs('set', 'cookieDomain', '.humanjavascript.com');
+          _gs('track');
+        </script>
+        
+    
+    
+    <meta name="author" content="HenrikJoreteg">
+    
+    
+    <link rel="next" href="./ch04-organizing-your-code.html" />
+    
+    
+    <link rel="prev" href="./ch02-the-big-decision.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+<link rel="stylesheet" href="gitbook/style.css">
+
+
+        
+    <div class="book" data-github="HenrikJoreteg/human-javascript" data-level="4" data-basepath="." data-revision="1428642973331">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
+    <span id="font-settings-wrapper">
+        <a href="#" class="btn pull-left toggle-font-settings" aria-label="Toggle font settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="btn-group btn-block">
+        <button id="reduce-font-size" class="btn btn-default">A</button>
+        <button id="enlarge-font-size" class="btn btn-default">A</button>
+    </div>
+
+    <ul class="list-group font-family-list">
+        <li class="list-group-item" data-font="0">Serif</li>
+        <li class="list-group-item" data-font="1">Sans</li>
+    </ul>
+
+    <div class="btn-group btn-group-xs btn-block color-theme-list">
+        <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
+        <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
+        <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </span>
+
+    <!-- Actions Right -->
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Share on Google Plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="http://twitter.com/home?status=I'm%20reading%20Human%20JavaScript%20by%20%40HenrikJoreteg.%0A%0AA%20free%20online%20book%20on%20building%20sane%20JavaScript%20apps%3A%20http%3A%2F%2Fread.humanjavascript.com" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" aria-label="Share on Twitter"><i class="fa fa-twitter"></i></a>
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-spinner fa-spin"></i>
+        <a href="./" >Human JavaScript</a>
+    </h1>
+</div>
+
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://gumroad.com/l/humanjs" target="blank">Buy the e-book</a>
+        </li>
+        <li>
+            <a href="http://learn.humanjavascript.com" target="blank">Video Tutorials</a>
+        </li>
+        <li>
+            <a href="http://ampersandjs.com" target="blank">Ampersand.js</a>
+        </li>
+        <li>
+            <a href="http://twitter.com/henrikjoreteg" target="blank">Follow @HenrikJoreteg</a>
+        </li>
+
+        <li class="divider"></li>
+
+        <li data-level="0" data-path="index.html">
+            <a href="./"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+    
+        <li class="chapter " data-level="1" data-path="ch00-foreword.html">
+            
+            <a href="./ch00-foreword.html">
+                <i class="fa fa-check"></i> <b>1.</b> Foreword by Jan Lehnardt
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="ch01-introduction.html">
+            
+            <a href="./ch01-introduction.html">
+                <i class="fa fa-check"></i> <b>2.</b> Introduction
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="ch02-the-big-decision.html">
+            
+            <a href="./ch02-the-big-decision.html">
+                <i class="fa fa-check"></i> <b>3.</b> Client or server? Go big or go home.
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="ch03-code-for-humans.html">
+            
+            <a href="./ch03-code-for-humans.html">
+                <i class="fa fa-check"></i> <b>4.</b> Writing code for humans.
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="ch04-organizing-your-code.html">
+            
+            <a href="./ch04-organizing-your-code.html">
+                <i class="fa fa-check"></i> <b>5.</b> No more clientside spaghetti. Organizing your code.
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="ch05-eventification.html">
+            
+            <a href="./ch05-eventification.html">
+                <i class="fa fa-check"></i> <b>6.</b> Using events: Modules talking to modules
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="ch06-models.html">
+            
+            <a href="./ch06-models.html">
+                <i class="fa fa-check"></i> <b>7.</b> Models
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="ch07-views.html">
+            
+            <a href="./ch07-views.html">
+                <i class="fa fa-check"></i> <b>8.</b> Views and the DOM
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="ch08-templating.html">
+            
+            <a href="./ch08-templating.html">
+                <i class="fa fa-check"></i> <b>9.</b> Handling templates
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="ch09-clientside-routing.html">
+            
+            <a href="./ch09-clientside-routing.html">
+                <i class="fa fa-check"></i> <b>10.</b> Clientside Routing
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11" data-path="ch10-launch-sequence.html">
+            
+            <a href="./ch10-launch-sequence.html">
+                <i class="fa fa-check"></i> <b>11.</b> 3... 2... 1... Blastoff!
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12" data-path="ch11-testing-and-QA.html">
+            
+            <a href="./ch11-testing-and-QA.html">
+                <i class="fa fa-check"></i> <b>12.</b> Testing and QA
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13" data-path="ch12-settings-and-configs.html">
+            
+            <a href="./ch12-settings-and-configs.html">
+                <i class="fa fa-check"></i> <b>13.</b> Settings and configs
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14" data-path="ch13-caveats.html">
+            
+            <a href="./ch13-caveats.html">
+                <i class="fa fa-check"></i> <b>14.</b> Caveats/Gotchas
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="15" data-path="ch14-conclusion.html">
+            
+            <a href="./ch14-conclusion.html">
+                <i class="fa fa-check"></i> <b>15.</b> A few closing thoughts
+            </a>
+            
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Generated using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="page-wrapper" tabindex="-1">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 26.666666666666668%;min-width: 20%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="./index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="./ch00-foreword.html" title="Foreword by Jan Lehnardt" class="chapter done new-chapter" data-progress="1" style="left: 6.666666666666667%;"></a>
+    
+        <a href="./ch01-introduction.html" title="Introduction" class="chapter done new-chapter" data-progress="2" style="left: 13.333333333333334%;"></a>
+    
+        <a href="./ch02-the-big-decision.html" title="Client or server? Go big or go home." class="chapter done new-chapter" data-progress="3" style="left: 20%;"></a>
+    
+        <a href="./ch03-code-for-humans.html" title="Writing code for humans." class="chapter done new-chapter" data-progress="4" style="left: 26.666666666666668%;"></a>
+    
+        <a href="./ch04-organizing-your-code.html" title="No more clientside spaghetti. Organizing your code." class="chapter  new-chapter" data-progress="5" style="left: 33.333333333333336%;"></a>
+    
+        <a href="./ch05-eventification.html" title="Using events: Modules talking to modules" class="chapter  new-chapter" data-progress="6" style="left: 40%;"></a>
+    
+        <a href="./ch06-models.html" title="Models" class="chapter  new-chapter" data-progress="7" style="left: 46.666666666666664%;"></a>
+    
+        <a href="./ch07-views.html" title="Views and the DOM" class="chapter  new-chapter" data-progress="8" style="left: 53.333333333333336%;"></a>
+    
+        <a href="./ch08-templating.html" title="Handling templates" class="chapter  new-chapter" data-progress="9" style="left: 60%;"></a>
+    
+        <a href="./ch09-clientside-routing.html" title="Clientside Routing" class="chapter  " data-progress="10" style="left: 66.66666666666667%;"></a>
+    
+        <a href="./ch10-launch-sequence.html" title="3... 2... 1... Blastoff!" class="chapter  " data-progress="11" style="left: 73.33333333333333%;"></a>
+    
+        <a href="./ch11-testing-and-QA.html" title="Testing and QA" class="chapter  " data-progress="12" style="left: 80%;"></a>
+    
+        <a href="./ch12-settings-and-configs.html" title="Settings and configs" class="chapter  " data-progress="13" style="left: 86.66666666666667%;"></a>
+    
+        <a href="./ch13-caveats.html" title="Caveats/Gotchas" class="chapter  " data-progress="14" style="left: 93.33333333333333%;"></a>
+    
+        <a href="./ch14-conclusion.html" title="A few closing thoughts" class="chapter  " data-progress="15" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_6">
+                    
+                        <h1 id="writing-code-for-humans-">Writing code for humans.</h1>
+<ul>
+<li>Code is read more often than it&#39;s written. </li>
+<li>If you&#39;re too clever, you&#39;ll forever own the project because no one else will know what the heck you&#39;re doing. That will suck, and so will your project.</li>
+<li>As the requirements change and evolve (as they most certainly will), your ability to quickly read and understand the various pieces of your app will dramatically affect how quickly you can change course.</li>
+</ul>
+<p>All of this is to say: WRITE CODE THAT IS EASY TO READ!</p>
+<h2 id="tools-and-trickery">Tools and trickery</h2>
+<p>You with me? Ok, but how do you actually do this? </p>
+<p>Well, let me give you a silly example:</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Assume this is an array of strings from somewhere</span>
+<span class="hljs-keyword">var</span> myArray = [<span class="hljs-string">'hello'</span>, <span class="hljs-string">'something'</span>, <span class="hljs-string">'awesome'</span>]; 
+
+<span class="hljs-keyword">if</span> (~myArray.indexOf(<span class="hljs-string">'hello'</span>)) {
+  <span class="hljs-comment">// Under what circumstances does this get called?</span>
+}
+</code></pre>
+<p>Can you explain to me, in plain English, what that tilde does? If you can, good for you, but do you think your whole team can?</p>
+<p>Now, compare it to this:</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Same array:</span>
+<span class="hljs-keyword">var</span> myArray = [<span class="hljs-string">'hello'</span>, <span class="hljs-string">'something'</span>, <span class="hljs-string">'awesome'</span>]; 
+<span class="hljs-keyword">if</span> (myArray.indexOf(<span class="hljs-string">'hello'</span>) !== -<span class="hljs-number">1</span>) {
+  <span class="hljs-comment">// Certainly a bit clearer, right?</span>
+}
+</code></pre>
+<p>Or even this, using Underscore:</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Same array:</span>
+<span class="hljs-keyword">var</span> myArray = [<span class="hljs-string">'hello'</span>, <span class="hljs-string">'something'</span>, <span class="hljs-string">'awesome'</span>]; 
+<span class="hljs-keyword">if</span> (_(myArray).contains(<span class="hljs-string">'hello'</span>)) {
+  <span class="hljs-comment">// Also pretty freakin' clear!</span>
+}
+</code></pre>
+<p>Frankly, I think the first example looks better, visually. In fact, I sometimes use the first when working on a library that isn&#39;t meant to be a team project. However, if I&#39;m working on an app that other people will be working on with me, I will write it the second way, because it&#39;s more explicit and requires less of the other developers who may not be familiar with the syntax in the first example.</p>
+<h2 id="cleverness-is-a-double-edged-sword">Cleverness is a double edged sword</h2>
+<p>Being clever is sometimes a good thing. But as was so aptly put by <a href="http://paddy.io/posts/cleverness/" target="_blank">Paddy Foran</a> cleverness for the sake of cleverness should be avoided at all costs. </p>
+<p>The goal should always be clarity and readability.</p>
+<h2 id="code-linting">Code Linting</h2>
+<p>As with readability, code conventions and format should be consistent throughout the project. In practice, if you have multiple people involved in a project, this can be hard.</p>
+<p>Semicolons, tabs, and spaces are contentious things among developers. Every developer I&#39;ve ever met has opinions (usually strongly held) about code style.</p>
+<p>If you&#39;re building large JS apps and not doing some form of static analysis on your code, you&#39;re asking for trouble. It helps catch silly errors and forces code style consistency. Ideally, no one should be able to tell who wrote what part of your app. If you&#39;re on a team, it should all be uniform within a project. How do you do that? We use a slick tool written by <a href="https://twitter.com/quitlahok" target="_blank">Nathan LaFreniere</a> on our team called, simply, <a href="http://github.com/nlf/precommit-hook" target="_blank">precommit-hook</a>. So all we have to do is add &quot;precommit-hook&quot; to our list of dependencies (in a Node project).</p>
+<p>What it does is install a git pre-commit hook in the project that uses JSHint to check your project for code style consistency before each commit. Once upon a time there was a tool called JSLint written by Douglas Crockford. Nowadays there&#39;s a less strict, more configurable version of the same project called <a href="http://www.jshint.com/" target="_blank">JSHint</a>. </p>
+<p>The neat thing about the npm version of JSHint is that if you run it from the command line it will look for a configuration file (.jshintrc) and an ignore file (.jshintignore), both of which the precommit hook will create for you if they don&#39;t exist. You can use these files to configure JSHint to follow the code style rules that you&#39;ve defined for the project. This means that you can now run <code>jshint .</code> at the root of your project and lint the entire thing to make sure it follows the code styles you&#39;ve defined in the <code>.jshintrc</code> file. Awesome, right!?!</p>
+<p>Our <code>.jshintrc</code> files usually looks something like this:</p>
+<pre><code class="lang-json">  {
+    "<span class="hljs-attribute">asi</span>": <span class="hljs-value"><span class="hljs-literal">false</span></span>,
+    "<span class="hljs-attribute">expr</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
+    "<span class="hljs-attribute">loopfunc</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
+    "<span class="hljs-attribute">curly</span>": <span class="hljs-value"><span class="hljs-literal">false</span></span>,
+    "<span class="hljs-attribute">evil</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
+    "<span class="hljs-attribute">white</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
+    "<span class="hljs-attribute">undef</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
+    "<span class="hljs-attribute">indent</span>": <span class="hljs-value"><span class="hljs-number">4</span>
+  </span>}
+</code></pre>
+<p>The awesome thing about this approach is that you can enforce consistency, the rules for the project are contained, and actually get checked into the project repo itself (in the form of the <code>.jshintrc</code> file). So, if you decide to have a different set of rules for the next project, fine. It&#39;s not a global setting; it&#39;s defined and adjusted by whomever runs the project. Optionally, you can also specify your jshint config in package.json by adding a <code>jshintConfig</code> property containing the same type of config as above.</p>
+<p>For a more in-depth discussion on style and style guides I highly recommend reading Airbnb&#39;s <a href="https://github.com/airbnb/javascript" target="_blank">JavaScript style guide</a>. It will give you a good overview of the various common style discrepancies and the reasoning behind some of their choices. It&#39;s also a great starting point if you want to fork it and tweak it to be &quot;the style guide&quot; for your team.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./ch02-the-big-decision.html" class="navigation navigation-prev " aria-label="Previous page: Client or server? Go big or go home."><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./ch04-organizing-your-code.html" class="navigation navigation-next " aria-label="Next page: No more clientside spaghetti. Organizing your code."><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

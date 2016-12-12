@@ -1,0 +1,11 @@
+2016/10/24-09:25:36.764 1079 Reusing MANIFEST /home/kylepuno/.config/google-chrome-unstable/Default/IndexedDB/https_flamite.com_0.indexeddb.leveldb/MANIFEST-000001
+2016/10/24-09:25:36.765 1079 Recovering log #3
+2016/10/24-09:25:36.765 1079 Reusing old log /home/kylepuno/.config/google-chrome-unstable/Default/IndexedDB/https_flamite.com_0.indexeddb.leveldb/000003.log 
+2016/10/24-09:25:40.045 1079 Current memtable full; waiting...
+2016/10/24-09:25:40.046 3231 Level-0 table #5: started
+2016/10/24-09:25:40.048 3231 Level-0 table #5: 47109 bytes OK
+2016/10/24-09:25:40.050 3231 Delete type=0 #3
+2016/10/24-09:25:40.050 3231 Level-0 table #7: started
+2016/10/24-09:25:40.050 3231 Level-0 table #7: 0 bytes OK
+2016/10/24-09:25:40.051 3231 Delete type=0 #4
+2016/10/24-09:25:40.051 3231 Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)

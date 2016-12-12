@@ -1,0 +1,469 @@
+<!DOCTYPE HTML>
+<html lang="en-US" manifest="./manifest.appcache">
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <title>3... 2... 1... Blastoff! | Human JavaScript</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 0.5.2">
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          ga('create', 'UA-1196801-11', 'auto');
+          ga('send', 'pageview');
+        </script>
+        <script>
+          !function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(
+          arguments)};d=s.createElement(q);q=s.getElementsByTagName(q)[0];
+          d.src='http://d1l6p2sc9645hc.cloudfront.net/tracker.js';q.parentNode.
+          insertBefore(d,q)}(window,document,'script','_gs');
+          _gs('GSN-555504-T', false);
+          _gs('set', 'cookieDomain', '.humanjavascript.com');
+          _gs('track');
+        </script>
+        
+    
+    
+    <meta name="author" content="HenrikJoreteg">
+    
+    
+    <link rel="next" href="./ch11-testing-and-QA.html" />
+    
+    
+    <link rel="prev" href="./ch09-clientside-routing.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+<link rel="stylesheet" href="gitbook/style.css">
+
+
+        
+    <div class="book" data-github="HenrikJoreteg/human-javascript" data-level="11" data-basepath="." data-revision="1428642973331">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
+    <span id="font-settings-wrapper">
+        <a href="#" class="btn pull-left toggle-font-settings" aria-label="Toggle font settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="btn-group btn-block">
+        <button id="reduce-font-size" class="btn btn-default">A</button>
+        <button id="enlarge-font-size" class="btn btn-default">A</button>
+    </div>
+
+    <ul class="list-group font-family-list">
+        <li class="list-group-item" data-font="0">Serif</li>
+        <li class="list-group-item" data-font="1">Sans</li>
+    </ul>
+
+    <div class="btn-group btn-group-xs btn-block color-theme-list">
+        <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
+        <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
+        <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </span>
+
+    <!-- Actions Right -->
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Share on Google Plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="http://twitter.com/home?status=I'm%20reading%20Human%20JavaScript%20by%20%40HenrikJoreteg.%0A%0AA%20free%20online%20book%20on%20building%20sane%20JavaScript%20apps%3A%20http%3A%2F%2Fread.humanjavascript.com" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" aria-label="Share on Twitter"><i class="fa fa-twitter"></i></a>
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-spinner fa-spin"></i>
+        <a href="./" >Human JavaScript</a>
+    </h1>
+</div>
+
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://gumroad.com/l/humanjs" target="blank">Buy the e-book</a>
+        </li>
+        <li>
+            <a href="http://learn.humanjavascript.com" target="blank">Video Tutorials</a>
+        </li>
+        <li>
+            <a href="http://ampersandjs.com" target="blank">Ampersand.js</a>
+        </li>
+        <li>
+            <a href="http://twitter.com/henrikjoreteg" target="blank">Follow @HenrikJoreteg</a>
+        </li>
+
+        <li class="divider"></li>
+
+        <li data-level="0" data-path="index.html">
+            <a href="./"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+    
+        <li class="chapter " data-level="1" data-path="ch00-foreword.html">
+            
+            <a href="./ch00-foreword.html">
+                <i class="fa fa-check"></i> <b>1.</b> Foreword by Jan Lehnardt
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="ch01-introduction.html">
+            
+            <a href="./ch01-introduction.html">
+                <i class="fa fa-check"></i> <b>2.</b> Introduction
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="ch02-the-big-decision.html">
+            
+            <a href="./ch02-the-big-decision.html">
+                <i class="fa fa-check"></i> <b>3.</b> Client or server? Go big or go home.
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="ch03-code-for-humans.html">
+            
+            <a href="./ch03-code-for-humans.html">
+                <i class="fa fa-check"></i> <b>4.</b> Writing code for humans.
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="ch04-organizing-your-code.html">
+            
+            <a href="./ch04-organizing-your-code.html">
+                <i class="fa fa-check"></i> <b>5.</b> No more clientside spaghetti. Organizing your code.
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="ch05-eventification.html">
+            
+            <a href="./ch05-eventification.html">
+                <i class="fa fa-check"></i> <b>6.</b> Using events: Modules talking to modules
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="ch06-models.html">
+            
+            <a href="./ch06-models.html">
+                <i class="fa fa-check"></i> <b>7.</b> Models
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="ch07-views.html">
+            
+            <a href="./ch07-views.html">
+                <i class="fa fa-check"></i> <b>8.</b> Views and the DOM
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="ch08-templating.html">
+            
+            <a href="./ch08-templating.html">
+                <i class="fa fa-check"></i> <b>9.</b> Handling templates
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="ch09-clientside-routing.html">
+            
+            <a href="./ch09-clientside-routing.html">
+                <i class="fa fa-check"></i> <b>10.</b> Clientside Routing
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11" data-path="ch10-launch-sequence.html">
+            
+            <a href="./ch10-launch-sequence.html">
+                <i class="fa fa-check"></i> <b>11.</b> 3... 2... 1... Blastoff!
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12" data-path="ch11-testing-and-QA.html">
+            
+            <a href="./ch11-testing-and-QA.html">
+                <i class="fa fa-check"></i> <b>12.</b> Testing and QA
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13" data-path="ch12-settings-and-configs.html">
+            
+            <a href="./ch12-settings-and-configs.html">
+                <i class="fa fa-check"></i> <b>13.</b> Settings and configs
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14" data-path="ch13-caveats.html">
+            
+            <a href="./ch13-caveats.html">
+                <i class="fa fa-check"></i> <b>14.</b> Caveats/Gotchas
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="15" data-path="ch14-conclusion.html">
+            
+            <a href="./ch14-conclusion.html">
+                <i class="fa fa-check"></i> <b>15.</b> A few closing thoughts
+            </a>
+            
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Generated using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="page-wrapper" tabindex="-1">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 73.33333333333333%;min-width: 66.66666666666667%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="./index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="./ch00-foreword.html" title="Foreword by Jan Lehnardt" class="chapter done new-chapter" data-progress="1" style="left: 6.666666666666667%;"></a>
+    
+        <a href="./ch01-introduction.html" title="Introduction" class="chapter done new-chapter" data-progress="2" style="left: 13.333333333333334%;"></a>
+    
+        <a href="./ch02-the-big-decision.html" title="Client or server? Go big or go home." class="chapter done new-chapter" data-progress="3" style="left: 20%;"></a>
+    
+        <a href="./ch03-code-for-humans.html" title="Writing code for humans." class="chapter done new-chapter" data-progress="4" style="left: 26.666666666666668%;"></a>
+    
+        <a href="./ch04-organizing-your-code.html" title="No more clientside spaghetti. Organizing your code." class="chapter done new-chapter" data-progress="5" style="left: 33.333333333333336%;"></a>
+    
+        <a href="./ch05-eventification.html" title="Using events: Modules talking to modules" class="chapter done new-chapter" data-progress="6" style="left: 40%;"></a>
+    
+        <a href="./ch06-models.html" title="Models" class="chapter done new-chapter" data-progress="7" style="left: 46.666666666666664%;"></a>
+    
+        <a href="./ch07-views.html" title="Views and the DOM" class="chapter done new-chapter" data-progress="8" style="left: 53.333333333333336%;"></a>
+    
+        <a href="./ch08-templating.html" title="Handling templates" class="chapter done new-chapter" data-progress="9" style="left: 60%;"></a>
+    
+        <a href="./ch09-clientside-routing.html" title="Clientside Routing" class="chapter done " data-progress="10" style="left: 66.66666666666667%;"></a>
+    
+        <a href="./ch10-launch-sequence.html" title="3... 2... 1... Blastoff!" class="chapter done " data-progress="11" style="left: 73.33333333333333%;"></a>
+    
+        <a href="./ch11-testing-and-QA.html" title="Testing and QA" class="chapter  " data-progress="12" style="left: 80%;"></a>
+    
+        <a href="./ch12-settings-and-configs.html" title="Settings and configs" class="chapter  " data-progress="13" style="left: 86.66666666666667%;"></a>
+    
+        <a href="./ch13-caveats.html" title="Caveats/Gotchas" class="chapter  " data-progress="14" style="left: 93.33333333333333%;"></a>
+    
+        <a href="./ch14-conclusion.html" title="A few closing thoughts" class="chapter  " data-progress="15" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_12">
+                    
+                        <h1 id="3-2-1-blastoff-">3... 2... 1... Blastoff!</h1>
+<p>Generally there&#39;s going to be a fairly specific load sequence you&#39;ll want to go through before you&#39;re ready to &quot;respond&quot; to the specific URL in your client code. </p>
+<p>Typically, that sequence goes something like this:</p>
+<ul>
+<li>Init your main application object. (The &quot;app&quot; global I keep talking about.)</li>
+<li>Attach a few model collections to that app global.</li>
+<li>Init and populate a single &quot;me&quot; object that represents the currently logged in user and stores session specific state.</li>
+<li>Render the application layout view inside the <code>&lt;body&gt;</code> tag.</li>
+<li>Fetch any app-wide data that&#39;s needed.</li>
+<li>Then trigger the clientside router</li>
+</ul>
+<p>Now in code:</p>
+<pre><code class="lang-javascript">module.exports = {
+  <span class="hljs-comment">// The main launch function. This is the </span>
+  <span class="hljs-comment">// entry point into your application.</span>
+  launch: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+    <span class="hljs-comment">// Explicitly create a global called "app."</span>
+    <span class="hljs-comment">// Doing this first means it *always* exists</span>
+    <span class="hljs-comment">// if we need to access it from a view.</span>
+    window.app = <span class="hljs-keyword">this</span>;
+
+    <span class="hljs-comment">// Attach some model collections</span>
+    <span class="hljs-keyword">this</span>.tasks = <span class="hljs-keyword">new</span> Tasks();
+    <span class="hljs-keyword">this</span>.chatMessages = <span class="hljs-keyword">new</span> Messages();
+
+    <span class="hljs-comment">// Init a 'me' object</span>
+    window.me = <span class="hljs-keyword">new</span> Me();
+
+    <span class="hljs-keyword">this</span>.fetchStandardData(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(err)</span> {</span>
+      <span class="hljs-keyword">if</span> (err) {
+        <span class="hljs-comment">// Handle errors</span>
+      }
+      <span class="hljs-comment">// render the main viev</span>
+      app.view = <span class="hljs-keyword">new</span> MainView({
+        model: me
+      }).render();
+
+      <span class="hljs-comment">// Start our router.</span>
+      <span class="hljs-comment">// Init our URL handlers and the history tracker</span>
+      <span class="hljs-keyword">new</span> Router();
+      app.history = Backbone.history;
+      <span class="hljs-comment">// We have what we need, we can now start our router and show the appropriate page</span>
+      app.history.start({pushState: <span class="hljs-literal">true</span>, root: <span class="hljs-string">'/'</span>});
+    });
+
+  },
+  fetchStandardData: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(mainCallback)</span> {</span>
+    <span class="hljs-keyword">var</span> self = <span class="hljs-keyword">this</span>;
+    async.parallel([
+      <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(cb)</span> {</span>
+        self.tasks.fetch({success: cb});
+      },
+      <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(cb)</span> {</span>
+        me.fetch({success: cb});
+      } 
+    ], mainCallback);
+  }
+}
+</code></pre>
+<p>As you can tell there&#39;s a handful of things we do regardless of the URL. Once we&#39;ve got that sorted, then we init our router and start our history tracking (which enables back-button support). </p>
+<p>The client router looks something like this:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> Backbone = <span class="hljs-built_in">require</span>(<span class="hljs-string">'backbone'</span>);
+<span class="hljs-keyword">var</span> TaskDetailPage = <span class="hljs-built_in">require</span>(<span class="hljs-string">'pages/taskDetail'</span>);
+<span class="hljs-keyword">var</span> FourOhFourPage = <span class="hljs-built_in">require</span>(<span class="hljs-string">'pages/fourOhFour'</span>);
+
+
+module.exports = Backbone.Router.extend({
+  routes: {
+    <span class="hljs-string">''</span>: <span class="hljs-string">'home'</span>,
+    <span class="hljs-string">':slug/:slug/task/:taskid'</span>: <span class="hljs-string">'memberTaskDetail'</span>,
+    ...
+  },
+
+  <span class="hljs-comment">// ------- ROUTE HANDLERS ---------</span>
+  home: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+    app.navigate(app.teams.first().chatUrl);
+  },
+
+  memberTaskDetail: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(teamId, memberId, taskId)</span> {</span>
+    <span class="hljs-keyword">var</span> team = app.teams.get(teamId);
+    <span class="hljs-keyword">var</span> member = team &amp;&amp; team.members.get(memberId)
+
+    <span class="hljs-comment">// make sure we found our models or send to an internal</span>
+    <span class="hljs-comment">// 'not found' page. </span>
+    <span class="hljs-keyword">if</span> (!team || !member) <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.fourOhFour();
+
+    <span class="hljs-comment">// We may or may not have the task, so we just pass it in and try to get it from the view.</span>
+    app.renderPage(<span class="hljs-keyword">new</span> TaskDetailPage({
+      team: team,
+      member: member,
+      taskId: taskId
+    }));
+  },
+
+  fourOhFour: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+    app.renderPage(<span class="hljs-keyword">new</span> FourOhFourPage());
+  }
+}
+</code></pre>
+<p>So, each of the routes listed at the top are turned into regexes by Backbone and linked to a handler function.</p>
+<p>That function is called with the &quot;arguments,&quot; a.k.a. parameters you specified as being dynamic in your routes.</p>
+<p>I typically think of each handler&#39;s job as finding actual clientside model objects and then creating a &quot;page&quot; view that it passes to the application.</p>
+<p>The app is responsible for taking that view and rendering it per conventions of the app. Usually we just have a &quot;page view&quot; be a specialized kind of Backbone view that also has a few standard methods for &quot;show&quot; and &quot;hide.&quot; The app controller just calls &quot;show&quot; on the new one and &quot;hide&quot; on the currently active page, and the views add/remove themselves from the application layout&#39;s main &quot;pages&quot; container.</p>
+<p>From this point forward we never need to do the launch sequence again. We&#39;ll just change the route, then the route handlers will render the appropriate page, and the page will ensure it has (or fetches) the data it needs.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./ch09-clientside-routing.html" class="navigation navigation-prev " aria-label="Previous page: Clientside Routing"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./ch11-testing-and-QA.html" class="navigation navigation-next " aria-label="Next page: Testing and QA"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

@@ -1,0 +1,17 @@
+2016/12/09-12:19:59.211 1027 Reusing MANIFEST /home/kylepuno/.config/google-chrome-unstable/Default/IndexedDB/https_kylepuno-dev-ed.lightning.force.com_0.indexeddb.leveldb/MANIFEST-000001
+2016/12/09-12:19:59.211 1027 Recovering log #96
+2016/12/09-12:19:59.218 1027 Reusing old log /home/kylepuno/.config/google-chrome-unstable/Default/IndexedDB/https_kylepuno-dev-ed.lightning.force.com_0.indexeddb.leveldb/000096.log 
+2016/12/09-12:20:01.534 1027 Current memtable full; waiting...
+2016/12/09-12:20:01.534 5974 Level-0 table #101: started
+2016/12/09-12:20:01.548 5974 Level-0 table #101: 1561158 bytes OK
+2016/12/09-12:20:01.551 5974 Delete type=0 #96
+2016/12/09-12:20:01.551 5974 Level-0 table #103: started
+2016/12/09-12:20:01.551 5974 Level-0 table #103: 0 bytes OK
+2016/12/09-12:20:01.554 5974 Delete type=0 #100
+2016/12/09-12:20:01.554 5974 Manual compaction at level-0 from '\x00\x0f\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x10\x00\x00\x00' @ 0 : 0; will stop at (end)
+2016/12/09-12:20:06.081 5974 Compacting 1@1 + 1@2 files
+2016/12/09-12:20:06.094 5974 Generated table #104@1: 1012 keys, 570609 bytes
+2016/12/09-12:20:06.094 5974 Compacted 1@1 + 1@2 files => 570609 bytes
+2016/12/09-12:20:06.096 5974 compacted to: files[ 0 0 1 0 0 0 0 ]
+2016/12/09-12:20:06.096 5974 Delete type=2 #98
+2016/12/09-12:20:06.096 5974 Delete type=2 #101

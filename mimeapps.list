@@ -1,0 +1,13 @@
+[Added Associations]
+image/png=feh.desktop;
+application/pdf=firefox.desktop;chrome-pjkljhegncpnkpknbcohdijeoejaedia-Default.desktop;gimp.desktop;
+text/vnd.trolltech.linguist=atom.desktop;google-chrome-unstable.desktop;
+application/xml=google-chrome-unstable.desktop;
+text/html=google-chrome-unstable.desktop;atom.desktop;
+application/javascript=atom.desktop;
+image/jpeg=feh.desktop;
+application/x-shellscript=atom.desktop;
+text/css=atom.desktop;
+audio/mpeg=vlc.desktop;rhythmbox.desktop;
+audio/x-mpegurl=vlc.desktop;
+video/mp4=vlc.desktop;
